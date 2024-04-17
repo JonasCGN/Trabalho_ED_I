@@ -1,4 +1,5 @@
 *.exe
 *.json
 
-/output
+/output/
+/.vscode/
