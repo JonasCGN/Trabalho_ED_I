@@ -3,7 +3,7 @@
 #include<string.h>
 
 #include "./estrutura/estruturas.h"
-#include "./funcoes/funcao.h"
+#include "./funcoes/menu.h"
 
 /*
 PESSOA
