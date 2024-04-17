@@ -4,6 +4,7 @@
 
 void cadastrarCliente(CLIENTE *cliente,int i){
     (cliente+i)->pessoa->id = i+1;
+    
     printf("Digite o nome do cliente:");
     gets((cliente+i)->pessoa->nome);
     
@@ -14,6 +15,6 @@ void cadastrarCliente(CLIENTE *cliente,int i){
     scanf("%d", &(cliente+i)->limite_de_credito);
     
     /*
-    Registrar pedidos
+        Registrar pedidos
     */
 }
