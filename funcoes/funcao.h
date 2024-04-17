@@ -109,15 +109,16 @@ void menu(){
     printf("BEM VINDO AO SISTEMA!!\n");
     printf(" Digite 1 para fazer seu cadastro\n Digite 2 para entrar no sistema geral \n Digite 3 para sair do programa:");
     scanf("%d",&op);
+    
     switch (op){
-    case 1 :
-        //cadastrarFuncionario();
-        //cadastrarCliente();
-        break;
-    case 2 :
-        // incrementar função do sistema privado( dicionar senha)
-    default:
-        break;
+        case 1 :
+            //cadastrarFuncionario();
+            //cadastrarCliente();
+            break;
+        case 2 :
+            // incrementar função do sistema privado( dicionar senha)
+        default:
+            break;
     }   
     
 }
