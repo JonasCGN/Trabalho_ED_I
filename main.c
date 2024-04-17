@@ -32,32 +32,6 @@ Tipo[2][10] = {"Publica", "Privada"}
 
 
 
-
-void menu(){ 
-    int qtdC = 10, qtdF = 10;
-    int op;
-
-    FUNCIONARIO* funcionario;
-    ORGANIZACAO* organizacao;
-    CLIENTE* cliente;
-    
-
-    printf("BEM VINDO AO SISTEMA!!\n");
-    printf(" Digite 1 para fazer seu cadastro\n Digite 2 para entrar no sistema geral \n Digite 3 para sair do programa:");
-    scanf("%d",&op);
-    switch (op){
-    case 1 :
-        //cadastrarFuncionario();
-        //cadastrarCliente();
-        break;
-    case 2 :
-        // incrementar função do sistema privado( dicionar senha)
-    default:
-        break;
-    }   
-    
-}
-
 int main(){
 
     return 0;
