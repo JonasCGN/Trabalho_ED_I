@@ -31,6 +31,6 @@ Tipo[2][10] = {"Publica", "Privada"}
 */
 
 int main(){
-
+    
     return 0;
 }
