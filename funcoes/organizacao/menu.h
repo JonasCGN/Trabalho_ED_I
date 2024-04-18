@@ -14,7 +14,7 @@ void menuOrganizacao(ORGANIZACAO *organizacao,int *o,int qtdO){
         break;
         
         default:
-
+            printf("Opcao Invalida!");
         break;
     }
 }

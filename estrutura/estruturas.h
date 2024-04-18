@@ -11,7 +11,6 @@ typedef struct{
     int id_organizacao;
 }FUNCIONARIO;
 
-
 typedef struct{
     int id;
     int quant_funcionario ;
@@ -23,13 +22,12 @@ typedef struct{
 
 typedef struct{
     int id_pedidos;
-    
-    char iten[50];
+    char item[50];
     float valor_pedido;
     int pedidos_efetuados;
     int id_do_cliente;
-    int id_da_organização;
-    int id_funcionrio; 
+    int id_da_organizacao;
+    int id_funcionario; 
 }PEDIDOS;
 
 typedef struct{

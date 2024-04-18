@@ -6,12 +6,7 @@
 #include "../funcionario/menu.h"
 #include "../pedidos/fazerpedido.h"
 
-<<<<<<< HEAD
 void menu(CLIENTE *cliente,FUNCIONARIO *funcionario,ORGANIZACAO *organizcao,int *f,int *o,int *c,int *oF,int *qtdC,int *qtdF,int *qtdO,int *qtdOF){ 
-=======
-void menu(CLIENTE *cliente,FUNCIONARIO *funcionario,ORGANIZACAO *organizcao,PEDIDOS *pedido){ 
-    int qtdC = 0, qtdF = 0, qtdO =0;
->>>>>>> 794fd4a99560ce0911159c4dc18bbaecc935968e
     int op;
 
     printf("BEM VINDO AO SISTEMA!!\n");
@@ -20,13 +15,8 @@ void menu(CLIENTE *cliente,FUNCIONARIO *funcionario,ORGANIZACAO *organizcao,PEDI
     
     switch (op){
         case 1:
-<<<<<<< HEAD
             menuCliente(cliente,c,*qtdC);
         break;
-=======
-            menuCliente(cliente,qtdC);
-            fazerPedido(pedido,qtdC);        
->>>>>>> 794fd4a99560ce0911159c4dc18bbaecc935968e
         
         break;  
         case 2:
