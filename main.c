@@ -12,6 +12,8 @@
 #include "./funcoes/menu/menu_principal.h"
 #include "./funcoes/menu/menucadastro.h"
 
+;oadsd
+
 /*
 PESSOA
 Nome, ID, Idade
