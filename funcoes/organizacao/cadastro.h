@@ -1,11 +1,8 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-
 void cadastrarOrganizacao(ORGANIZACAO *organizacao, FUNCIONARIO *funcionario,int i){
     char opc;
-    int id;
     
+    (organizacao+i)->id = i+1;
+
     printf("Digite o nome da organizacao:");
     gets((organizacao+i)->nome);
 
@@ -17,7 +14,6 @@ void cadastrarOrganizacao(ORGANIZACAO *organizacao, FUNCIONARIO *funcionario,int
 
     // pedidos efetuados pela org
     
-    
     printf("Qual o tipo da sua organizacao:\n1 - Publico\n 2 - Privado");
     
     opc = getche();
@@ -25,7 +21,7 @@ void cadastrarOrganizacao(ORGANIZACAO *organizacao, FUNCIONARIO *funcionario,int
     switch (opc){
         case '1':
             (organizacao+i)->tipo = 0;
-            break;
+        break;
         
         case '2':
             (organizacao+i)->tipo = 1;
@@ -40,5 +36,22 @@ void cadastrarOrganizacao(ORGANIZACAO *organizacao, FUNCIONARIO *funcionario,int
     /*
     Listar funcionarios
     */
+
+}
+
+void listarOrganizacao(ORGANIZACAO* organizacao, int qtd){
+    
+    for(int i=0;i<qtd;i++){
+        printf("Organizacao %d: \n",i + 1);
+        printf(" ID da organizacao: %d\n",organizacao[i].id);
+        printf(" Nome: %s\n",organizacao[i].nome);
+        printf(" Faturamento da organização: %.2f\n",organizacao[i].faturamento);
+        if(organizacao[i].tipo == 0){
+            printf(" Tipo da organizacao: Publica");
+        }else{
+            printf(" Tipo da organizacao: Privada");
+        }
+        printf("\n");
+    }
 
 }

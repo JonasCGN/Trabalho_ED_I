@@ -1,9 +1,16 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
+#include<conio.h>
 
 #include "./estrutura/estruturas.h"
-#include "./funcoes/menu.h"
+#include "./alocacao/cliente.h"
+#include "./alocacao/funcionario.h"
+#include "./alocacao/organizacao.h"
+#include "./alocacao/pedido.h"
+#include "./alocacao/pessoa.h"
+#include "./funcoes/menu/menu_principal.h"
+#include "./funcoes/menu/menucadastro.h"
 
 /*
 PESSOA
@@ -30,7 +37,19 @@ Tipo[2][10] = {"Publica", "Privada"}
 1 - Privada
 */
 
+/*
+qtd = quantidade
+qtdC = quantidade cliente
+qtdO = quantidade Organizacao 
+*/
+
 int main(){
-    
+    CLIENTE *cliente;
+    FUNCIONARIO *funcionario;
+    ORGANIZACAO *organizacao;
+
+
+    menu(cliente,funcionario,organizacao);
+
     return 0;
 }
