@@ -10,7 +10,6 @@
 #include "./alocacao/pedido.h"
 #include "./alocacao/pessoa.h"
 #include "./funcoes/menu/menu_principal.h"
-#include "./funcoes/menu/menucadastro.h"
 
 /*
 PESSOA
@@ -48,11 +47,13 @@ int main(){
     FUNCIONARIO *funcionario;
     ORGANIZACAO *organizacao;
 
-    cliente = (CLIENTE*)malloc(sizeof(CLIENTE));
-    funcionario = (FUNCIONARIO*)malloc(sizeof(FUNCIONARIO));
-    organizacao = (ORGANIZACAO*)malloc(sizeof(ORGANIZACAO));
+    cliente = (CLIENTE*)malloc(2*sizeof(CLIENTE));
+    funcionario = (FUNCIONARIO*)malloc(2*sizeof(FUNCIONARIO));
+    organizacao = (ORGANIZACAO*)malloc(2*sizeof(ORGANIZACAO));
     
-    menu(cliente,funcionario,organizacao);
+    int f=0,o=0,c=0,oF,qtdC,qtdF,qtdO,qtdOF;
+
+    menu(cliente,funcionario,organizacao,&f,&o,&c,&oF,&qtdC,&qtdF,&qtdO,&qtdOF);
 
     
     return 0;

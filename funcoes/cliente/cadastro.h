@@ -1,18 +1,19 @@
-void cadastrarCliente(CLIENTE *cliente,int i){
+void cadastrarCliente(CLIENTE *cliente,int *i){
 
-    alocaPessoa(&((cliente+i)->pessoa));
+    alocaPessoa(&((cliente+(*i))->pessoa));
     
-    (cliente+i)->pessoa->id = i+1;
+    (cliente+(*i))->pessoa->id = (*i)+1;
 
     printf("Digite o nome do cliente:");
-    gets((cliente+i)->pessoa->nome);
+    gets((cliente+(*i))->pessoa->nome);
     
     printf("Digite a idade do cliente:");
-    scanf("%d",&(cliente+i)->pessoa->idade);
+    scanf("%d",&(cliente+(*i))->pessoa->idade);
     
     printf("Digite o limite de credito do cliente:");
-    scanf("%f", &(cliente+i)->limite_de_credito);
+    scanf("%f", &(cliente+(*i))->limite_de_credito);
     
+    (*i)++;
     /*
         Registrar pedidos
     */

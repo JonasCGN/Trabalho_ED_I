@@ -1,4 +1,4 @@
-void menuFuncionario(FUNCIONARIO *funcinario,ORGANIZACAO *organizacao,int i,int qtd){
+void menuFuncionario(FUNCIONARIO *funcinario,ORGANIZACAO *organizacao,int *f,int *oF,int qtdF,int qtdO,int qtdOF){
     int opc;
 
     printf("1 - Cadastrar Funcionario\n2 - Mostrar Funcionario\n");
@@ -6,11 +6,11 @@ void menuFuncionario(FUNCIONARIO *funcinario,ORGANIZACAO *organizacao,int i,int 
     
     switch (opc){
         case 1:
-            cadastrarFuncionario(funcinario,organizacao,i,qtd);
+            cadastrarFuncionario(funcinario,organizacao,f,oF,qtdO,qtdOF);
         break;
 
         case 2:
-            
+            mostarfuncionario(qtdF,funcinario);
         break;
         
         default:

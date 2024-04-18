@@ -1,16 +1,18 @@
-void cadastrarFuncionario(FUNCIONARIO *funcionario, ORGANIZACAO *organizacao,int i,int qtd){
-    int n;
+void cadastrarFuncionario(FUNCIONARIO *funcionario, ORGANIZACAO *organizacao,int *f,int *oF,int qtdO,int qtdOF){
+    int n,id,o;
     
-    (funcionario + i)->pessoa->id = i+1;
+    alocaPessoa(&((funcionario+(*f))->pessoa));
+
+    (funcionario + (*f))->pessoa->id = (*f)+1;
 
     printf("Digite o nome do funcionario");
-    gets((funcionario + i)->pessoa->nome);
+    gets((funcionario + (*f))->pessoa->nome);
 
     printf("Digite a idade do funcionario");
-    scanf("%d", &(funcionario + i)->pessoa->idade);
+    scanf("%d", &(funcionario + (*f))->pessoa->idade);
 
     printf("Digite o seu salario: ");
-    scanf("%f",&(funcionario + i)->salario);
+    scanf("%f",&(funcionario + (*f))->salario);
 
     do{
         printf("Digite o tipo de funcionario:");
@@ -18,14 +20,26 @@ void cadastrarFuncionario(FUNCIONARIO *funcionario, ORGANIZACAO *organizacao,int
         scanf("%d",&n);
     }while(n < 1 || n > 3);
 
-    (funcionario +i)->tipo = n-1;
+    (funcionario + (*f))->tipo = n-1;
 
-    listarOrganizacao(organizacao,qtd); 
+    listarOrganizacao(organizacao,qtdO); 
     
     printf("Digite o id da organização");
-    scanf("%d",&(funcionario + i)->id_organizacao);
+    scanf("%d",&id);
 
-    (organizacao+i)->funcionario = (funcionario + i);
+    for(int i=0;i<qtdO;i++){
+        if((funcionario + (*f))->id_organizacao == id){
+            o = i ;
+            break;
+        }
+    }
+
+    (organizacao+o)->funcionario[(*oF)] = *(funcionario + (*f));
+    (*oF)++;
+    (*f)++;
+    if((*oF) >= qtdOF-1){
+        realocafuncionario(&((organizacao+o)->funcionario), (*oF)+2);
+    }
 }
 
 void mostarfuncionario(int qtdf, FUNCIONARIO *funcionarios){

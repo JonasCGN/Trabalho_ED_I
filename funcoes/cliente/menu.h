@@ -1,4 +1,4 @@
-void menuCliente(CLIENTE *cliente,int i){
+void menuCliente(CLIENTE *cliente,int *i,int qtdC){
     char opc;
 
     printf("1 - Cadastrar Cliente\n2 - Mostrar Clientes\n");
@@ -10,11 +10,11 @@ void menuCliente(CLIENTE *cliente,int i){
         break;
 
         case '2':
-
+            mostrarclientes(qtdC,cliente);
         break;
         
         default:
-
+            printf("Opcao invalida!");
         break;
     }
 }

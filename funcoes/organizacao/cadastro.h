@@ -1,16 +1,21 @@
-void cadastrarOrganizacao(ORGANIZACAO *organizacao,int i){
+void cadastrarOrganizacao(ORGANIZACAO *organizacao,int *o){
     char opc;
+    int qtd;
     
-    (organizacao+i)->id = i+1;
+    (organizacao+(*o))->id = (*o)+1;
 
     printf("Digite o nome da organizacao:");
-    gets((organizacao+i)->nome);
+    gets((organizacao+(*o))->nome);
 
     printf("Digite o id da organizacao:");
-    scanf("%d",&(organizacao+i)->id);
+    scanf("%d",&(organizacao+(*o))->id);
     
     printf("Digite o faturamento da organização :");
-    scanf("%f",&(organizacao+i)->faturamento);
+    scanf("%f",&(organizacao+(*o))->faturamento);
+
+    printf("Quantas funcionarios tem na organizacao:");
+    scanf("%d", &qtd);
+    alocarfuncionario(&((organizacao+(*o))->funcionario),qtd);
 
     // pedidos efetuados pela org
     
@@ -20,11 +25,11 @@ void cadastrarOrganizacao(ORGANIZACAO *organizacao,int i){
     
     switch (opc){
         case '1':
-            (organizacao+i)->tipo = 0;
+            (organizacao+(*o))->tipo = 0;
         break;
         
         case '2':
-            (organizacao+i)->tipo = 1;
+            (organizacao+(*o))->tipo = 1;
         break;
         
         default:
