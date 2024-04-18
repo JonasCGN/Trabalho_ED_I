@@ -12,8 +12,6 @@
 #include "./funcoes/menu/menu_principal.h"
 #include "./funcoes/menu/menucadastro.h"
 
-;oadsd
-
 /*
 PESSOA
 Nome, ID, Idade
@@ -49,12 +47,14 @@ int main(){
     CLIENTE *cliente;
     FUNCIONARIO *funcionario;
     ORGANIZACAO *organizacao;
+    PEDIDOS *pedidos;
 
     cliente = (CLIENTE*)malloc(sizeof(CLIENTE));
     funcionario = (FUNCIONARIO*)malloc(sizeof(FUNCIONARIO));
     organizacao = (ORGANIZACAO*)malloc(sizeof(ORGANIZACAO));
+    pedidos = (PEDIDOS*)malloc(sizeof(PEDIDOS));
     
-    menu(cliente,funcionario,organizacao);
+    menu(cliente,funcionario,organizacao,pedidos);
 
     
     return 0;

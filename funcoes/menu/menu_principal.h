@@ -4,12 +4,9 @@
 #include "../organizacao/menu.h"
 #include "../funcionario/cadastro.h"
 #include "../funcionario/menu.h"
+#include "../pedidos/fazerpedido.h"
 
-
-
-
-
-void menu(CLIENTE *cliente,FUNCIONARIO *funcionario,ORGANIZACAO *organizcao){ 
+void menu(CLIENTE *cliente,FUNCIONARIO *funcionario,ORGANIZACAO *organizcao,PEDIDOS *pedido){ 
     int qtdC = 0, qtdF = 0, qtdO =0;
     int op;
 
@@ -20,8 +17,9 @@ void menu(CLIENTE *cliente,FUNCIONARIO *funcionario,ORGANIZACAO *organizcao){
     switch (op){
         case 1:
             menuCliente(cliente,qtdC);
-        break;
+            fazerPedido(pedido,qtdC);        
         
+        break;  
         case 2:
             menuFuncionario(funcionario,organizcao,qtdF,qtdO);
         break;
