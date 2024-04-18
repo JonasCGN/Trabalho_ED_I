@@ -46,7 +46,9 @@ int main(){
     CLIENTE *cliente;
     FUNCIONARIO *funcionario;
     ORGANIZACAO *organizacao;
+    PEDIDOS *pedidos;
 
+<<<<<<< HEAD
     cliente = (CLIENTE*)malloc(2*sizeof(CLIENTE));
     funcionario = (FUNCIONARIO*)malloc(2*sizeof(FUNCIONARIO));
     organizacao = (ORGANIZACAO*)malloc(2*sizeof(ORGANIZACAO));
@@ -54,6 +56,14 @@ int main(){
     int f=0,o=0,c=0,oF,qtdC,qtdF,qtdO,qtdOF;
 
     menu(cliente,funcionario,organizacao,&f,&o,&c,&oF,&qtdC,&qtdF,&qtdO,&qtdOF);
+=======
+    cliente = (CLIENTE*)malloc(sizeof(CLIENTE));
+    funcionario = (FUNCIONARIO*)malloc(sizeof(FUNCIONARIO));
+    organizacao = (ORGANIZACAO*)malloc(sizeof(ORGANIZACAO));
+    pedidos = (PEDIDOS*)malloc(sizeof(PEDIDOS));
+    
+    menu(cliente,funcionario,organizacao,pedidos);
+>>>>>>> 794fd4a99560ce0911159c4dc18bbaecc935968e
 
     
     return 0;

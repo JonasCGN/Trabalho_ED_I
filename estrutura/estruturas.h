@@ -1,12 +1,4 @@
 typedef struct{
-
-}PEDIDOS;
-
-typedef struct{
-
-}PEDIDOS_EFETUADOS;
-
-typedef struct{
     int id;
     char nome[50];
     int idade;
@@ -19,17 +11,29 @@ typedef struct{
     int id_organizacao;
 }FUNCIONARIO;
 
+
+typedef struct{
+    int id;
+    int quant_funcionario ;
+    FUNCIONARIO *funcionario;
+    char nome[50];
+    float faturamento;
+    int tipo;
+}ORGANIZACAO;
+
+typedef struct{
+    int id_pedidos;
+    
+    char iten[50];
+    float valor_pedido;
+    int pedidos_efetuados;
+    int id_do_cliente;
+    int id_da_organização;
+    int id_funcionrio; 
+}PEDIDOS;
+
 typedef struct{
     PESSOA *pessoa;
     float limite_de_credito;
     PEDIDOS *pedidos;
 }CLIENTE;
-
-typedef struct{
-    int id;
-    FUNCIONARIO *funcionario;
-    char nome[50];
-    float faturamento;
-    PEDIDOS_EFETUADOS *pedidos_efetuados;
-    int tipo;
-}ORGANIZACAO;
