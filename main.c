@@ -48,8 +48,12 @@ int main(){
     FUNCIONARIO *funcionario;
     ORGANIZACAO *organizacao;
 
-
+    cliente = (CLIENTE*)malloc(sizeof(CLIENTE));
+    funcionario = (FUNCIONARIO*)malloc(sizeof(FUNCIONARIO));
+    organizacao = (ORGANIZACAO*)malloc(sizeof(ORGANIZACAO));
+    
     menu(cliente,funcionario,organizacao);
 
+    
     return 0;
 }

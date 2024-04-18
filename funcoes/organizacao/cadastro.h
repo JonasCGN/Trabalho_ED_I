@@ -1,4 +1,4 @@
-void cadastrarOrganizacao(ORGANIZACAO *organizacao, FUNCIONARIO *funcionario,int i){
+void cadastrarOrganizacao(ORGANIZACAO *organizacao,int i){
     char opc;
     
     (organizacao+i)->id = i+1;
@@ -33,19 +33,18 @@ void cadastrarOrganizacao(ORGANIZACAO *organizacao, FUNCIONARIO *funcionario,int
         
     }
 
-    /*
-    Listar funcionarios
-    */
 
 }
 
 void listarOrganizacao(ORGANIZACAO* organizacao, int qtd){
     
     for(int i=0;i<qtd;i++){
+
         printf("Organizacao %d: \n",i + 1);
         printf(" ID da organizacao: %d\n",organizacao[i].id);
         printf(" Nome: %s\n",organizacao[i].nome);
         printf(" Faturamento da organização: %.2f\n",organizacao[i].faturamento);
+        //faturamento
         if(organizacao[i].tipo == 0){
             printf(" Tipo da organizacao: Publica");
         }else{

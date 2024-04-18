@@ -1,5 +1,5 @@
 void cadastrarFuncionario(FUNCIONARIO *funcionario, ORGANIZACAO *organizacao,int i,int qtd){
-    int n,j;
+    int n;
     
     (funcionario + i)->pessoa->id = i+1;
 
