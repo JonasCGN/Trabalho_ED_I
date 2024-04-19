@@ -1,4 +1,4 @@
-void menuCliente(CLIENTE *cliente, PEDIDOS *pedidos,int *c,int *p,int *qtdC,int qtdP){
+void menuCliente(CLIENTE *cliente, PEDIDOS *pedidos,int *c,int *p,int qtdC,int qtdP){
     int opc;
 
     do{
@@ -11,13 +11,16 @@ void menuCliente(CLIENTE *cliente, PEDIDOS *pedidos,int *c,int *p,int *qtdC,int 
         
         switch (opc){
             case 1:
-                cadastrarCliente(cliente,c);
+                if (qtdC > *c)
+                    cadastrarCliente(cliente,c);
+                else
+                    printf("Nao eh possivel cadastrar!");
                 // *qtdC += 1;
                 // cliente  = realocaCliente(cliente,*qtdC);
             break;
 
             case 2:
-                mostrarclientes(*qtdC,cliente);
+                mostrarclientes(*c,cliente);
             break;
 
             case 3:
