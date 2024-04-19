@@ -8,7 +8,7 @@ void menuFuncionario(FUNCIONARIO *funcinario,ORGANIZACAO *organizacao,int *f,int
 
         fflush(stdin);
 
-        system("cls||clear");
+        // system("cls||clear");
 
         switch (opc){
             case 1:

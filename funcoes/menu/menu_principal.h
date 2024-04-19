@@ -7,7 +7,7 @@
 #include "../funcionario/menu.h"
 
 
-void menu(CLIENTE *cliente,FUNCIONARIO *funcionario,ORGANIZACAO *organizcao,PEDIDOS *pedidos,int *c,int *f,int *o,int *p,int *qtdC,int *qtdF,int *qtdP,int *qtdO){ 
+void menu(CLIENTE *cliente,FUNCIONARIO *funcionario,ORGANIZACAO *organizacao,PEDIDOS *pedidos,int *c,int *f,int *o,int *p,int *qtdC,int *qtdF,int *qtdP,int *qtdO){ 
     int op;
 
     do{
@@ -18,20 +18,20 @@ void menu(CLIENTE *cliente,FUNCIONARIO *funcionario,ORGANIZACAO *organizcao,PEDI
 
         fflush(stdin);
         
-        system("cls||clear");
+        // system("cls||clear");
 
         switch (op){
             case 1:
                 menuCliente(cliente,pedidos,c,p,*qtdC,*qtdP);
             break;
             
-            break;  
             case 2:
-                menuFuncionario(funcionario,organizcao,f,*qtdF,*qtdO);
+                listarOrganizacao(organizacao,*qtdO);
+                menuFuncionario(funcionario,organizacao,f,*qtdF,*qtdO);
             break;
             
             case 3:
-                menuOrganizacao(organizcao,o,qtdO);
+                menuOrganizacao(organizacao,o,qtdO);
             break;
 
             default:

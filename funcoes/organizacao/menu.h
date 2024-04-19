@@ -8,13 +8,13 @@ void menuOrganizacao(ORGANIZACAO *organizacao,int *o,int *qtdO){
         
         fflush(stdin);
 
-        system("cls||clear");
+        // system("cls||clear");
         
         switch (opc){
             case 1:
                 cadastrarOrganizacao(organizacao, o);
                 *qtdO += 1;
-                realocaOrganizacao(&(organizacao),*qtdO);
+                realocaOrganizacao(&organizacao,*qtdO);
             break;
 
             case 2:

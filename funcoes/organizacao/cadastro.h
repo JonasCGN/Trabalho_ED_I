@@ -16,8 +16,6 @@ void cadastrarOrganizacao(ORGANIZACAO *organizacao,int *o){
 
     alocaMatFucionario(&((organizacao+(*o))->funcionario),((organizacao+(*o))->quant_funcionario));
 
-    // pedidos efetuados pela org
-
     printf("Qual o tipo da sua organizacao:\n1 - Publico\n2 - Privado\n");
     opc = getche();
     
@@ -35,8 +33,6 @@ void cadastrarOrganizacao(ORGANIZACAO *organizacao,int *o){
         break;
         
     }
-
-
 }
 
 void listarOrganizacao(ORGANIZACAO* organizacao, int qtd){

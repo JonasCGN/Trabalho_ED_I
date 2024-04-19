@@ -7,7 +7,7 @@ void menuCliente(CLIENTE *cliente, PEDIDOS *pedidos,int *c,int *p,int qtdC,int q
         scanf("%d", &opc);
         fflush(stdin);
         
-        system("cls||clear");
+        // system("cls||clear");
         
         switch (opc){
             case 1:

@@ -22,8 +22,9 @@ void cadastrarFuncionario(FUNCIONARIO *funcionario, ORGANIZACAO *organizacao,int
 
     (funcionario + (*f))->tipo = n - 1;
 
-    printf("\n%d\n", qtdO);
-    
+    /*
+    Nao esta exibindo corretamente
+    */
     listarOrganizacao(organizacao,qtdO);
     
     printf("Digite o id da organizacao: ");
