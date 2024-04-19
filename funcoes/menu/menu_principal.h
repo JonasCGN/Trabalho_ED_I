@@ -41,10 +41,10 @@ void menu(CLIENTE *cliente,FUNCIONARIO *funcionario,ORGANIZACAO *organizacao,PED
     }while(op > 0);
     for(int i=0;i<*qtdO;i++)
         for(int j=0;j < (organizacao+i)->nP; j++)
-            liberarPedido((organizacao+i)->pedidos_efetuados[j],(organizacao+i)->quant_pedidos);
+            liberarMatPedido((organizacao+i)->pedidos_efetuados,(organizacao+i)->quant_pedidos);
 
     for(int i=0;i < *qtdO;i++)
         for(int j=0;j<(cliente+i)->nP;j++)
-            liberarPedido((cliente+i)->pedidos[j],(cliente+i)->pedidos[j]);
+            liberarMatPedido((cliente+i)->pedidos,(cliente+i)->quat_pedidos);
 
 }

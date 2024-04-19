@@ -18,7 +18,7 @@ void alocaMatPedido(PEDIDOS ***pedidos,int qtd){
     }
 }
 
-void liberarPedido(PEDIDOS **pedido,int qtd){
+void liberarMatPedido(PEDIDOS **pedido,int qtd){
     for(int i=0;i<qtd;i++)
         free(pedido[i]);
 
