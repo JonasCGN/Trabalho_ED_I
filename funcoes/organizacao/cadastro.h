@@ -10,7 +10,10 @@ void cadastrarOrganizacao(ORGANIZACAO *organizacao,int *o){
     scanf("%f",&(organizacao+(*o))->faturamento);
 
     printf("Quantas funcionarios tem na organizacao: ");
-    scanf("%d", &((organizacao+(*o))->quant_funcionario));
+    scanf("%d", &((organizacao+(*o))->quant_funcionario)); // lembrar de sempre que um funcionario usar o id da organização esse numero incrementar 
+    // ideia em vez de pedir pra digitar esse valo ele ser incrmentado sozinho na hora que o funcionario
+    // se cadastrar nessa empresa isso ser um vetor dentro da struct de organzação 
+   
     
     (organizacao+(*o))->n = 0;
 
@@ -35,11 +38,11 @@ void cadastrarOrganizacao(ORGANIZACAO *organizacao,int *o){
     }
 }
 
-void listarOrganizacao(ORGANIZACAO* organizacao, int qtd){
+void listarOrganizacao(ORGANIZACAO* organizacao, int qtdo){
     
     printf("----------------------------------------------\n");
     printf("|Lista de organizacoes: \n");
-    for(int i=0;i < qtd-1 ;i++){
+    for(int i=0;i < qtdo-1 ;i++){
     
         printf("|Organizacao %d: \n",i + 1);
         printf("|ID da organizacao: %d\n",organizacao[i].id);
