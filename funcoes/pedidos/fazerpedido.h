@@ -13,6 +13,8 @@ void fazerPedido(PEDIDOS *pedido,ORGANIZACAO* organizacao,CLIENTE *cliente, int 
 
     alocacaoItemPedido(&((pedido+(*i))->item), (pedido+(*i))->pedidos_efetuados);
 
+    fflush(stdin);
+
     for(int j=0;j<(pedido+(*i))->pedidos_efetuados;j++){
         printf("Digite o pedido %d:",j+1);
         gets((pedido+(*i))->item[j]);
@@ -27,12 +29,22 @@ void fazerPedido(PEDIDOS *pedido,ORGANIZACAO* organizacao,CLIENTE *cliente, int 
     printf("Digite o id do funcionario: ");
     scanf("%d", &(pedido+(*i))->id_funcionario);
 
+<<<<<<< HEAD
     (organizacao+((pedido+(*i))->id_da_organizacao - 1))->pedidos_efetuados[nPO] = (pedido+(*i));
     (cliente+((pedido+(*i))->id_do_cliente - 1))->pedidos[nPC] = (pedido+(*i));
 
     ((organizacao+((pedido+(*i))->id_da_organizacao - 1))->nP)++;
     ((cliente+((pedido+(*i))->id_do_cliente - 1))->nP)++;
 
+=======
+    
+    (organizacao+((pedido+(*i))->id_da_organizacao-1))->pedidos_efetuados[nPO] = (pedido+(*i));
+    (cliente+((pedido+(*i))->id_do_cliente-1))->pedidos[nPC] = (pedido+(*i));
+   
+    ((organizacao+((pedido+(*i))->id_da_organizacao-1))->nP)++;
+    ((cliente+((pedido+(*i))->id_do_cliente-1))->nP)++;
+   
+>>>>>>> c5bcf410e172f53179e72acddf1a283115541fa4
     (*i)++;
 }
 
@@ -56,6 +68,9 @@ void listapedidos(PEDIDOS *pedido,int qtd){
     }
 }
 
+<<<<<<< HEAD
+
+=======
 void listarpedidosorg(ORGANIZACAO *organizacao, int idorg){        
     for(int i=0;i<(organizacao+(idorg-1))->nP;i++){
         printf("Nome dos pedidos:");
@@ -95,3 +110,4 @@ void listarPedidosCliente(CLIENTE *cliente, int idcliente){
     }
 
 }
+>>>>>>> 98695e62a4ec2849db6178a5b6b7ee44560f1ac5

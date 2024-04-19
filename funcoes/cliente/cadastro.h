@@ -14,7 +14,6 @@ void cadastrarCliente(CLIENTE *cliente,int *i){
     scanf("%d", &sup);
     
     do{
-        
         printf(" APENSAS MAIOR DE IDADE!!!\n");
         printf("Digite a idade do cliente: ");
         scanf("%d", &sup);
