@@ -67,7 +67,7 @@ void listarpedidosorg(ORGANIZACAO *organizacao, int idorg){
             printf("Nome: %s",(organizacao+(idorg-1))->pedidos_efetuados[i]->item[j]);
         }
 
-        printf("Valor do pedido: %d",(organizacao+(idorg-1))->pedidos_efetuados[i]->valor_pedido);
+        printf("Valor do pedido: %.2f",(organizacao+(idorg-1))->pedidos_efetuados[i]->valor_pedido);
 
         printf("Id do cliente: %d",(organizacao+(idorg-1))->pedidos_efetuados[i]->id_do_cliente);
         
@@ -88,7 +88,7 @@ void listarPedidosCliente(CLIENTE *cliente, int idcliente){
             printf("Nome: %s",(cliente+(idcliente-1))->pedidos[i]->item[j]);
         }
 
-        printf("Valor do pedido: %d",(cliente+(idcliente-1))->pedidos[i]->valor_pedido);
+        printf("Valor do pedido: %.2f",(cliente+(idcliente-1))->pedidos[i]->valor_pedido);
         printf("Id do cliente: %d",(cliente+(idcliente-1))->pedidos[i]->id_do_cliente);
         printf("Id da organizacao: %d",(cliente+(idcliente-1))->pedidos[i]->id_da_organizacao);    
         printf("Id do funcionario: %d",(cliente+(idcliente-1))->pedidos[i]->id_funcionario);
