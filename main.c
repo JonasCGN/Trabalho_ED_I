@@ -6,7 +6,7 @@
 #include "./estrutura/estruturas.h"
 #include "./alocacao/alocacao.h"
 #include "./funcoes/menu/menu_principal.h"
-
+// não esta cadastrando mais de um cliente
 int main(){
     CLIENTE *cliente;
     FUNCIONARIO *funcionario;
