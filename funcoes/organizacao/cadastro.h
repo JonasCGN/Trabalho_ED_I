@@ -12,7 +12,7 @@ void cadastrarOrganizacao(ORGANIZACAO *organizacao,int *o){
     printf("Quantas funcionarios tem na organizacao: ");
     scanf("%d", &((organizacao+(*o))->quant_funcionario));
    
-    printf("Quantas funcionarios tem na organizacao: ");
+    printf("Quantas pedidos quer salvar na organizacao:");
     scanf("%d", &((organizacao+(*o))->quant_pedidos));
 
     (organizacao+(*o))->nF = 0;

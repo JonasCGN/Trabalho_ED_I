@@ -59,4 +59,46 @@ void listapedidos(PEDIDOS *pedido,int qtd){
     }
 }
 
+<<<<<<< HEAD
 
+=======
+void listarpedidosorg(ORGANIZACAO *organizacao, int idorg){        
+    for(int i=0;i<(organizacao+(idorg-1))->nP;i++){
+        printf("Nome dos pedidos:");
+
+        printf("Id do pedido: %d",(organizacao+(idorg-1))->pedidos_efetuados[i]->id_pedidos);
+        
+        for(int j=0;j < ((organizacao+(idorg-1))->pedidos_efetuados[i]->pedidos_efetuados); j++){
+            printf("Pedido %d", j+1);
+            printf("Nome: %s",(organizacao+(idorg-1))->pedidos_efetuados[i]->item[j]);
+        }
+
+        printf("Valor do pedido: %.2f",(organizacao+(idorg-1))->pedidos_efetuados[i]->valor_pedido);
+
+        printf("Id do cliente: %d",(organizacao+(idorg-1))->pedidos_efetuados[i]->id_do_cliente);
+        
+        printf("Id da organizacao: %d",(organizacao+(idorg-1))->pedidos_efetuados[i]->id_da_organizacao);
+        
+        printf("Id do funcionario: %d",(organizacao+(idorg-1))->pedidos_efetuados[i]->id_funcionario);
+
+    }
+}
+
+void listarPedidosCliente(CLIENTE *cliente, int idcliente){        
+    for(int i=0;i<(cliente+(idcliente-1))->nP;i++){
+        printf("Nome dos pedidos:");
+        printf("Id do pedido: %d",(cliente+(idcliente-1))->pedidos[i]->id_pedidos);
+        
+        for(int j=0;j < ((cliente+(idcliente-1))->pedidos[i]->pedidos_efetuados); j++){
+            printf("Pedido %d", j+1);
+            printf("Nome: %s",(cliente+(idcliente-1))->pedidos[i]->item[j]);
+        }
+
+        printf("Valor do pedido: %.2f",(cliente+(idcliente-1))->pedidos[i]->valor_pedido);
+        printf("Id do cliente: %d",(cliente+(idcliente-1))->pedidos[i]->id_do_cliente);
+        printf("Id da organizacao: %d",(cliente+(idcliente-1))->pedidos[i]->id_da_organizacao);    
+        printf("Id do funcionario: %d",(cliente+(idcliente-1))->pedidos[i]->id_funcionario);
+    }
+
+}
+>>>>>>> 98695e62a4ec2849db6178a5b6b7ee44560f1ac5

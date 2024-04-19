@@ -1,9 +1,9 @@
 void menuCliente(CLIENTE *cliente, PEDIDOS *pedidos,ORGANIZACAO *organizacao,int *c,int *p,int qtdC,int qtdP){
-    int opc;
+    int opc,n;
 
     do{
         printf("---------------------------\n");
-        printf("|0 - Voltar menu principal|\n|1 - Cadastrar Cliente    |\n|2 - Mostrar Clientes     |\n|3 - Fazer pedido         |\n---------------------------\n");
+        printf("|0 - Voltar menu principal|\n|1 - Cadastrar Cliente    |\n|2 - Mostrar Clientes     |\n|3 - Fazer pedido         |\n|4 - Lista pedidos         |\n|5 - Lista pedido cliente         |---------------------------\n");
         scanf("%d", &opc);
         fflush(stdin);
         
@@ -29,6 +29,12 @@ void menuCliente(CLIENTE *cliente, PEDIDOS *pedidos,ORGANIZACAO *organizacao,int
 
             case 4:
                 listapedidos(pedidos,qtdP);
+            break;
+
+            case 5:
+                printf("Digite o pedido do cliente:");
+                scanf("%d", &n);
+                listarPedidosCliente(cliente,n);
             break;
 
             default:
