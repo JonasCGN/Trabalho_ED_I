@@ -1,4 +1,4 @@
-void menuCliente(CLIENTE *cliente, PEDIDOS *pedidos,int *c,int *p,int qtdC,int qtdP){
+void menuCliente(CLIENTE *cliente, PEDIDOS *pedidos,ORGANIZACAO *organizacao,int *c,int *p,int qtdC,int qtdP){
     int opc;
 
     do{
@@ -24,7 +24,7 @@ void menuCliente(CLIENTE *cliente, PEDIDOS *pedidos,int *c,int *p,int qtdC,int q
             break;
 
             case 3:
-                fazerPedido(pedidos,p);
+                fazerPedido(pedidos,organizacao,cliente,p);
             break;
 
             case 4:

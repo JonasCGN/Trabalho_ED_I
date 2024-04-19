@@ -10,14 +10,16 @@ void cadastrarOrganizacao(ORGANIZACAO *organizacao,int *o){
     scanf("%f",&(organizacao+(*o))->faturamento);
 
     printf("Quantas funcionarios tem na organizacao: ");
-    scanf("%d", &((organizacao+(*o))->quant_funcionario)); // lembrar de sempre que um funcionario usar o id da organização esse numero incrementar 
-    // ideia em vez de pedir pra digitar esse valo ele ser incrmentado sozinho na hora que o funcionario
-    // se cadastrar nessa empresa isso ser um vetor dentro da struct de organzação 
+    scanf("%d", &((organizacao+(*o))->quant_funcionario));
    
-    
-    (organizacao+(*o))->n = 0;
+    printf("Quantas funcionarios tem na organizacao: ");
+    scanf("%d", &((organizacao+(*o))->quant_pedidos));
+
+    (organizacao+(*o))->nF = 0;
+    (organizacao+(*o))->nP = 0;
 
     alocaMatFucionario(&((organizacao+(*o))->funcionario),((organizacao+(*o))->quant_funcionario));
+    alocaMatPedido(&((organizacao+(*o))->pedidos_efetuados),((organizacao+(*o))->quant_pedidos));
 
     printf("Qual o tipo da sua organizacao:\n1 - Publico\n2 - Privado\n");
     opc = getche();
@@ -68,8 +70,9 @@ void listarFuncionariosOrganizacao(ORGANIZACAO* organizacao, int qtdo){
     printf("----------------------------------------------\n");
     printf("|Lista de organizacoes: \n");
     for(int i=0;i < qtdo ;i++){
-        printf("Funcionarios da organizacao %d\n",i-1);
-        for(int j=0;j<(organizacao+i)->n;j++){
+        printf("Funcionarios da organizacao %d\n",i+1);
+        for(int j=0;j<(organizacao+i)->nF;j++){
+
             printf("Funcionario %d\n", j+1);
             printf("Nome: %s\n", (organizacao+i)->funcionario[j]->pessoa->nome);
             printf("Idade: %d\n", (organizacao+i)->funcionario[j]->pessoa->idade);
@@ -80,7 +83,8 @@ void listarFuncionariosOrganizacao(ORGANIZACAO* organizacao, int qtdo){
                 printf("Funcao: Supervisor");
             else if((organizacao+i)->funcionario[j]->tipo == 2)
                 printf("Funcao: Vendedor");
+                
         }
+        printf("----------------------------------------------\n");
     }
-
 }

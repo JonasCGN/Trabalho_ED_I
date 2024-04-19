@@ -23,17 +23,21 @@ typedef struct{
 
 typedef struct{
     int id;
-    int n;
+    int nF;
     int quant_funcionario ;
     FUNCIONARIO **funcionario;
     char nome[50];
     float faturamento;
     int tipo;
-    PEDIDOS *pedidos_efetuados;
+    int nP;
+    int quant_pedidos ;
+    PEDIDOS **pedidos_efetuados;
 }ORGANIZACAO;
 
 typedef struct{
     PESSOA *pessoa;
     float limite_de_credito;
-    PEDIDOS *pedidos;
+    int nP;
+    int quat_pedidos;
+    PEDIDOS **pedidos;
 }CLIENTE;

@@ -38,13 +38,13 @@ void cadastrarFuncionario(FUNCIONARIO *funcionario, ORGANIZACAO *organizacao,int
         }
     }
 
-    (organizacao + o)->funcionario[(organizacao+o)->n] = (funcionario+(*f));
+    (organizacao + o)->funcionario[(organizacao+o)->nF] = (funcionario+(*f));
 
-    ((organizacao+o)->n)++;
+    ((organizacao+o)->nF)++;
 
     (*f)++;
 
-    if((organizacao+o)->n >= ((organizacao+o)->quant_funcionario)){
+    if((organizacao+o)->nF >= ((organizacao+o)->quant_funcionario)){
         ((organizacao+o)->quant_funcionario)++;
         realocaMatFucionario(&((organizacao+o)->funcionario), ((organizacao+o)->quant_funcionario));
     }
@@ -69,7 +69,7 @@ void mostarfuncionario(int qtdf, FUNCIONARIO *funcionarios){
         }else{
             printf("|Tipo: Vendedor\n");
         }
-         printf("----------------------------------------------\n");
+        printf("----------------------------------------------\n");
         printf("\n");
     }
 }
