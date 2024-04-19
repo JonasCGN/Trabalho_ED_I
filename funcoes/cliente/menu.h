@@ -12,12 +12,8 @@ void menuCliente(CLIENTE *cliente,int *i,int qtdC){
         switch (opc){
             case 1:
                 cadastrarCliente(cliente,i);
-<<<<<<< HEAD
                 qtdC += 1;
                 realocaCliente(&(cliente),qtdC);
-=======
-                
->>>>>>> 7d8affa913abcc7e2305d6ae9852daec4f841609
             break;
 
             case 2:
