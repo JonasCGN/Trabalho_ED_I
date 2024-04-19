@@ -20,23 +20,22 @@ void cadastrarFuncionario(FUNCIONARIO *funcionario, ORGANIZACAO *organizacao,int
         scanf("%d",&n);
     }while(n < 1 || n > 3);
 
-    (funcionario + (*f))->tipo = n-1;
+    (funcionario + (*f))->tipo = n - 1;
 
-    listarOrganizacao(organizacao,qtdO); 
+    printf("\n%d\n", qtdO);
+    
+    listarOrganizacao(organizacao,qtdO);
     
     printf("Digite o id da organizacao: ");
     scanf("%d",&id);
 
-    printf("1");
     for(int i=0;i<qtdO;i++){
         if((organizacao+i)->id == id){
             o = i;
-            printf("Entrei");
+            (funcionario+(*f))->id_organizacao = id;
             break;
         }
     }
-    
-    printf("\n%d - %d\n", o, (organizacao+o)->id );
 
     (organizacao + o)->funcionario[(organizacao+o)->n] = (funcionario+(*f));
 
@@ -63,7 +62,6 @@ void mostarfuncionario(int qtdf, FUNCIONARIO *funcionarios){
         printf("|Idade: %d\n",funcionarios[i].pessoa->idade);
         printf("|Salario: %.2f\n",funcionarios[i].salario);
         printf("|ID da organizacao: %d\n",funcionarios[i].id_organizacao);
-
         if(funcionarios[i].tipo == 0){
             printf("|Tipo: Gerente\n");
         }else if (funcionarios[i].tipo == 1)

@@ -48,7 +48,8 @@ void listarOrganizacao(ORGANIZACAO* organizacao, int qtd){
         printf("|Organizacao %d: \n",i + 1);
         printf("|ID da organizacao: %d\n",organizacao[i].id);
         printf("|Nome: %s\n",organizacao[i].nome);
-        printf("|Faturamento da organização: %.2f\n",organizacao[i].faturamento);
+        printf("|Faturamento da organizacao: %.2f\n",organizacao[i].faturamento);
+        printf("|Quantidade de Funcionario: %d\n",organizacao[i].quant_funcionario);
         //faturamento
         if(organizacao[i].tipo == 0){
             printf("|Tipo da organizacao: Publica\n");

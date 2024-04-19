@@ -31,7 +31,7 @@ void menu(CLIENTE *cliente,FUNCIONARIO *funcionario,ORGANIZACAO *organizcao,PEDI
             break;
             
             case 3:
-                menuOrganizacao(organizcao,o,*qtdO);
+                menuOrganizacao(organizcao,o,qtdO);
             break;
 
             default:
