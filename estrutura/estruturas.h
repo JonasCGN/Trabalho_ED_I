@@ -30,6 +30,7 @@ typedef struct{
     int tipo;
     PEDIDOS *pedidos_efetuados;
 }ORGANIZACAO;
+
 typedef struct{
     PESSOA *pessoa;
     float limite_de_credito;

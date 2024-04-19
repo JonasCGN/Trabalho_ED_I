@@ -13,7 +13,7 @@ int main(){
     ORGANIZACAO *organizacao;
     PEDIDOS *pedidos;
 
-    int f=0,o=0,c=0,oF,qtdC=1,qtdF=2,qtdO=2,qtdOF=2;
+    int f=0,o=0,c=0,oF,qtdC=1,qtdF=1,qtdO=2,qtdOF=2;
 
     cliente = (CLIENTE*)malloc(qtdC*sizeof(CLIENTE));
     funcionario = (FUNCIONARIO*)malloc(qtdF*sizeof(FUNCIONARIO));

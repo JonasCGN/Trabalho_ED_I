@@ -13,6 +13,8 @@ void menuFuncionario(FUNCIONARIO *funcinario,ORGANIZACAO *organizacao,int *f,int
         switch (opc){
             case 1:
                 cadastrarFuncionario(funcinario,organizacao,f,oF,qtdO,qtdOF);
+                qtdF += 1;
+                realocafuncionario(&(funcinario),qtdF);
             break;
 
             case 2:

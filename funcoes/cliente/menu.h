@@ -21,9 +21,7 @@ void menuCliente(CLIENTE *cliente,int *i,int qtdC){
             break;
             
             default:
-                
                 printf("Opcao invalida!");
-               
             break;
         }
     }while(opc > 0);
