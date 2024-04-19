@@ -16,7 +16,7 @@ int sup = 0;
         printf(" APENSAS MAIOR DE IDADE!!!\n");
         printf("Digite a idade do cliente: ");
         scanf("%d", &sup);
-    } while (sup <18);
+    } while (sup < 18);
     (cliente+(*i))->pessoa->idade  = sup;
     
     fflush(stdin);
@@ -27,10 +27,6 @@ int sup = 0;
     fflush(stdin);
     
     (*i)++;
-<<<<<<< HEAD
-=======
-   
->>>>>>> edcb76a50bec0b8b2e3c60fd470fa18bcaad1283
 }
 
 void mostrarclientes(int qtdc, CLIENTE * cliente){
