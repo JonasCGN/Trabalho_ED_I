@@ -4,6 +4,8 @@ void menuCliente(CLIENTE *cliente,int *i,int qtdC){
     printf("1 - Cadastrar Cliente\n2 - Mostrar Clientes\n");
     opc = getche();
     
+    system("cls||clear");
+    
     switch (opc){
         case '1':
             cadastrarCliente(cliente,i);

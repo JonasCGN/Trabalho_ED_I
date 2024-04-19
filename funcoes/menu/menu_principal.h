@@ -13,6 +13,8 @@ void menu(CLIENTE *cliente,FUNCIONARIO *funcionario,ORGANIZACAO *organizcao,int 
     printf("1 - Menu Cliente\n2 - Menu Funcionario \n3 - Menu Organizcao:");
     scanf("%d",&op);
     
+    system("cls||clear");
+
     switch (op){
         case 1:
             menuCliente(cliente,c,*qtdC);

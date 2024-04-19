@@ -4,11 +4,7 @@
 #include<conio.h>
 
 #include "./estrutura/estruturas.h"
-#include "./alocacao/cliente.h"
-#include "./alocacao/funcionario.h"
-#include "./alocacao/organizacao.h"
-#include "./alocacao/pedido.h"
-#include "./alocacao/pessoa.h"
+#include "./alocacao/alocacao.h"
 #include "./funcoes/menu/menu_principal.h"
 
 /*
@@ -57,5 +53,16 @@ int main(){
 
     menu(cliente,funcionario,organizacao,&f,&o,&c,&oF,&qtdC,&qtdF,&qtdO,&qtdOF);
     
+    liberaPessoa(organizacao->funcionario->pessoa);
+    liberarFuncionario(organizacao->funcionario);
+    liberarOrganizacao(organizacao);
+
+    liberaPessoa(funcionario->pessoa);
+    liberarFuncionario(funcionario);
+    
+    liberaPessoa(cliente->pessoa);
+    liberarCliente(cliente);
+
+
     return 0;
 }

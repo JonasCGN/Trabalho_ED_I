@@ -4,6 +4,8 @@ void menuFuncionario(FUNCIONARIO *funcinario,ORGANIZACAO *organizacao,int *f,int
     printf("1 - Cadastrar Funcionario\n2 - Mostrar Funcionario\n");
     scanf("%d", &opc);
     
+    system("cls||clear");
+    
     switch (opc){
         case 1:
             cadastrarFuncionario(funcinario,organizacao,f,oF,qtdO,qtdOF);

@@ -35,8 +35,10 @@ void cadastrarFuncionario(FUNCIONARIO *funcionario, ORGANIZACAO *organizacao,int
     }
 
     (organizacao+o)->funcionario[(*oF)] = *(funcionario + (*f));
+    
     (*oF)++;
     (*f)++;
+
     if((*oF) >= qtdOF-1){
         realocafuncionario(&((organizacao+o)->funcionario), (*oF)+2);
     }

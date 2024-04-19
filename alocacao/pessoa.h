@@ -6,3 +6,7 @@ void alocaPessoa(PESSOA **pessoa){
     }
     
 }
+
+void liberaPessoa(PESSOA *pessoa){
+    free(pessoa);
+}

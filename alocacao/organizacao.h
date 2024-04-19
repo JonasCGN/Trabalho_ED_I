@@ -6,3 +6,7 @@ void realocaOrganizacao(ORGANIZACAO **organizacao, int qtdO){
         exit(1);
     }
 }
+
+void liberarOrganizacao(ORGANIZACAO *organizacao){
+    free(organizacao);
+}
