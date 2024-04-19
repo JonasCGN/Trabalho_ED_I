@@ -59,9 +59,6 @@ void listapedidos(PEDIDOS *pedido,int qtd){
     }
 }
 
-<<<<<<< HEAD
-
-=======
 void listarpedidosorg(ORGANIZACAO *organizacao, int idorg){        
     for(int i=0;i<(organizacao+(idorg-1))->nP;i++){
         printf("Nome dos pedidos:");
@@ -101,4 +98,3 @@ void listarPedidosCliente(CLIENTE *cliente, int idcliente){
     }
 
 }
->>>>>>> 98695e62a4ec2849db6178a5b6b7ee44560f1ac5
