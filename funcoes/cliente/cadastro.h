@@ -37,24 +37,3 @@ void cadastrarCliente(CLIENTE *cliente,int *i){
     (*i)++;
 }
 
-<<<<<<< HEAD
-void mostrarclientes(int qtdc, CLIENTE * cliente){
-    
-    printf("----------------------------------------------\n");
-    printf("|Lista de Clientes  \n");
-     printf("----------------------------------------------\n");
-    for(int i = 0; i < qtdc; i++){
-       
-        printf("|Cliente %d: \n",i + 1);
-        printf("|ID: %d\n",cliente[i].pessoa->id);
-        printf("|Nome: %s\n",cliente[i].pessoa->nome);
-        printf("|Idade: %d\n",cliente[i].pessoa->idade);
-        printf("|Limite de credito: %.2f\n",cliente[i].limite_de_credito);
-        listarPedidosCliente(cliente,i);
-        printf("----------------------------------------------\n");
-        printf("\n");
-    }
-
-}
-=======
->>>>>>> cf9294d5c52928e42f23a1026b5225f6623c0bac

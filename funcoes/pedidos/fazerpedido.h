@@ -86,12 +86,7 @@ void listarpedidosorg(ORGANIZACAO *organizacao, int idorg){
 }
 
 void listarPedidosCliente(CLIENTE *cliente, int idcliente){        
-<<<<<<< HEAD
     for(int i=0;i<(cliente+(idcliente))->nP;i++){
-=======
-
-    for(int i=0;i<(cliente+(idcliente-1))->nP;i++){
->>>>>>> cf9294d5c52928e42f23a1026b5225f6623c0bac
         printf("Nome dos pedidos:");
         printf("Id do pedido: %d",(cliente+(idcliente))->pedidos[i]->id_pedidos);
         
