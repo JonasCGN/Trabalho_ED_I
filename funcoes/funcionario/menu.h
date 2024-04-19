@@ -8,13 +8,13 @@ void menuFuncionario(FUNCIONARIO *funcinario,ORGANIZACAO *organizacao,int *f,int
 
         fflush(stdin);
 
-        // system("cls||clear");
+        system("cls||clear");
 
         switch (opc){
             case 1:
                 cadastrarFuncionario(funcinario,organizacao,f,qtdO);
-                qtdF += 1;
-                realocafuncionario(&(funcinario),qtdF);
+                // qtdF += 1;
+                // realocafuncionario(&(funcinario),qtdF);
             break;
 
             case 2:

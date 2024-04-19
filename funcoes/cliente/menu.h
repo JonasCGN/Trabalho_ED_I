@@ -1,4 +1,4 @@
-void menuCliente(CLIENTE *cliente, PEDIDOS *pedidos,int *c,int *p,int qtdC,int qtdP){
+void menuCliente(CLIENTE *cliente, PEDIDOS *pedidos,int *c,int *p,int *qtdC,int qtdP){
     int opc;
 
     do{
@@ -7,17 +7,17 @@ void menuCliente(CLIENTE *cliente, PEDIDOS *pedidos,int *c,int *p,int qtdC,int q
         scanf("%d", &opc);
         fflush(stdin);
         
-        // system("cls||clear");
+        system("cls||clear");
         
         switch (opc){
             case 1:
                 cadastrarCliente(cliente,c);
-                qtdC += 1;
-                realocaCliente(&(cliente),qtdC);
+                // *qtdC += 1;
+                // cliente  = realocaCliente(cliente,*qtdC);
             break;
 
             case 2:
-                mostrarclientes(qtdC,cliente);
+                mostrarclientes(*qtdC,cliente);
             break;
 
             case 3:

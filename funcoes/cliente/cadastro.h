@@ -4,7 +4,7 @@ void cadastrarCliente(CLIENTE *cliente,int *i){
 
     (cliente+(*i))->pessoa->id = (*i)+1;
 
-    printf("Digite o nome do cliente: ");
+    printf("Digite o nome do cliente %d: ", (*i)+1);
     gets((cliente+(*i))->pessoa->nome);
 
     fflush(stdin);
@@ -20,11 +20,6 @@ void cadastrarCliente(CLIENTE *cliente,int *i){
     fflush(stdin);
     
     (*i)++;
-    
-    
-    /*
-        Registrar pedidos
-    */
 }
 
 void mostrarclientes(int qtdc, CLIENTE * cliente){

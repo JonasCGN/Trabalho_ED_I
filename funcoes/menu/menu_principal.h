@@ -18,15 +18,14 @@ void menu(CLIENTE *cliente,FUNCIONARIO *funcionario,ORGANIZACAO *organizacao,PED
 
         fflush(stdin);
         
-        // system("cls||clear");
+        system("cls||clear");
 
         switch (op){
             case 1:
-                menuCliente(cliente,pedidos,c,p,*qtdC,*qtdP);
+                menuCliente(cliente,pedidos,c,p,qtdC,*qtdP);
             break;
             
             case 2:
-                listarOrganizacao(organizacao,*qtdO);
                 menuFuncionario(funcionario,organizacao,f,*qtdF,*qtdO);
             break;
             
