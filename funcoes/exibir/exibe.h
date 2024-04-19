@@ -119,7 +119,7 @@ void listapedidos(PEDIDOS *pedido,int qtd){
 void listarpedidosorg(ORGANIZACAO *organizacao, int idorg){      
     printf("----------------------------------------------\n");
     for(int i=0;i<(organizacao+idorg)->nP;i++){
-        printf("Informacao dos pedidos vinculados a essa organizacao:\n");
+        printf("Informacao dos pedidos vinculados a essa organizacao: \n");
         printf("----------------------------------------------\n");
         
         printf("Id do pedido: %d\n",(organizacao+idorg)->pedidos_efetuados[i]->id_pedidos);
