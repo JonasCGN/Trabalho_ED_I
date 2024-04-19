@@ -1,5 +1,7 @@
 void cadastrarCliente(CLIENTE *cliente,int *i){
 
+    alocaPessoa(&((cliente+(*i))->pessoa));
+
     (cliente+(*i))->pessoa->id = (*i)+1;
 
     printf("Digite o nome do cliente:");
@@ -16,6 +18,7 @@ void cadastrarCliente(CLIENTE *cliente,int *i){
     fflush(stdin);
     
     (*i)++;
+    
     
     /*
         Registrar pedidos
