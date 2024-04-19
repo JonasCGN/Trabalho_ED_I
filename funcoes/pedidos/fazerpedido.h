@@ -2,8 +2,8 @@ void fazerPedido(PEDIDOS *pedido,ORGANIZACAO* organizacao,CLIENTE *cliente, int 
     (pedido +(*i))->id_pedidos= (*i) +1;
     // listar itens
     
-    int nPO = (organizacao+((pedido+(*i))->id_da_organizacao-1))->nP;
-    int nPC = (cliente+((pedido+(*i))->id_do_cliente-1))->nP;
+    int nPO;
+    int nPC;
 
     printf("Digite o valor do pedido: ");
     scanf("%f", &(pedido+(*i))->valor_pedido);
@@ -21,27 +21,24 @@ void fazerPedido(PEDIDOS *pedido,ORGANIZACAO* organizacao,CLIENTE *cliente, int 
     }
 
     printf("Digite o id do cliente: ");
-    scanf("%d", &(pedido+(*i))->id_do_cliente);
+    scanf("%d", &nPC);
+
+    mostrarclientes(nPC-1,cliente,2);
 
     printf("Digite o id da organizacao: ");
-    scanf("%d", &(pedido+(*i))->id_da_organizacao);
+    scanf("%d", &nPO);
+
+    listarOrganizacao(organizacao,nPO-1,2);
 
     printf("Digite o id do funcionario: ");
     scanf("%d", &(pedido+(*i))->id_funcionario);
 
-    (organizacao+((pedido+(*i))->id_da_organizacao - 1))->pedidos_efetuados[nPO] = (pedido+(*i));
-    printf("1");
+    (organizacao+(nPO - 1))->pedidos_efetuados[nPO] = (pedido+(*i));
+    (cliente+(nPC-1))->pedidos[nPC] = (pedido+(*i));
 
-    
-    (cliente+((pedido+(*i))->id_do_cliente - 1))->pedidos[nPC] = (pedido+(*i));
-    printf("2");
+    ((organizacao+(nPO - 1))->nP)++;
 
-    ((organizacao+((pedido+(*i))->id_da_organizacao - 1))->nP)++;
-    printf("3");
-    
-    
-    ((cliente+((pedido+(*i))->id_do_cliente - 1))->nP)++;
-    printf("4");
+    ((cliente+(nPC-1))->nP)++;
 
     (*i)++;
 }
@@ -89,6 +86,7 @@ void listarpedidosorg(ORGANIZACAO *organizacao, int idorg){
 }
 
 void listarPedidosCliente(CLIENTE *cliente, int idcliente){        
+
     for(int i=0;i<(cliente+(idcliente-1))->nP;i++){
         printf("Nome dos pedidos:");
         printf("Id do pedido: %d",(cliente+(idcliente-1))->pedidos[i]->id_pedidos);

@@ -22,7 +22,7 @@ void menuOrganizacao(ORGANIZACAO *organizacao,int *o,int *qtdO){
             break;
 
             case 2:
-                listarOrganizacao(organizacao,*o);
+                listarOrganizacao(organizacao,*o,1);
             break;
 
             case 3:

@@ -1,3 +1,4 @@
+#include "../exibir/exibe.h"
 #include "../pedidos/fazerpedido.h"
 #include "../cliente/cadastro.h"
 #include "../cliente/menu.h"
