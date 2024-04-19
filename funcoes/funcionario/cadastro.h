@@ -40,8 +40,6 @@ void cadastrarFuncionario(FUNCIONARIO *funcionario, ORGANIZACAO *organizacao,int
 
     (organizacao + o)->funcionario[(organizacao+o)->n] = (funcionario+(*f));
 
-    printf("3");
-
     ((organizacao+o)->n)++;
 
     (*f)++;
@@ -56,7 +54,7 @@ void mostarfuncionario(int qtdf, FUNCIONARIO *funcionarios){
 
     printf("----------------------------------------------\n");
     printf("|Lista de Funcionarios: \n");
-    for(int i = 0; i < qtdf-1; i++){
+    for(int i = 0; i < qtdf; i++){
         printf("|Funcionario %d: \n",i + 1);
         printf("|ID: %d\n",funcionarios[i].pessoa->id);
         printf("|Nome: %s\n",funcionarios[i].pessoa->nome);

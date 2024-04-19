@@ -12,13 +12,16 @@ void menuFuncionario(FUNCIONARIO *funcinario,ORGANIZACAO *organizacao,int *f,int
 
         switch (opc){
             case 1:
-                cadastrarFuncionario(funcinario,organizacao,f,qtdO);
+                if (qtdF > *f)
+                    cadastrarFuncionario(funcinario,organizacao,f,qtdO);
+                else
+                    printf("Nao eh possivel cadastrar!");
                 // qtdF += 1;
                 // realocafuncionario(&(funcinario),qtdF);
             break;
 
             case 2:
-                mostarfuncionario(qtdF,funcinario);
+                mostarfuncionario(*f,funcinario);
             break;
             
             default:
