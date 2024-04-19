@@ -22,7 +22,7 @@ void menu(CLIENTE *cliente,FUNCIONARIO *funcionario,ORGANIZACAO *organizacao,PED
 
         switch (op){
             case 1:
-                menuCliente(cliente,pedidos,c,p,*qtdC,*qtdP);
+                menuCliente(cliente,pedidos,organizacao,c,p,*qtdC,*qtdP);
             break;
             
             case 2:

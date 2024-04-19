@@ -26,6 +26,13 @@ void cadastrarCliente(CLIENTE *cliente,int *i){
     printf("Digite o limite de credito do cliente: ");
     scanf("%f", &(cliente+(*i))->limite_de_credito);
     
+    printf("Digite a quantidade de pedido:");
+    scanf("%d", &(cliente+(*i))->quat_pedidos);
+
+    (cliente+(*i))->nP = 0;
+
+    alocaMatPedido(&((cliente+(*i))->pedidos), (cliente+(*i))->quat_pedidos);
+
     fflush(stdin);
     
     (*i)++;

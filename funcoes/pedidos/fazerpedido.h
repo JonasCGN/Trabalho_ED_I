@@ -1,6 +1,9 @@
-void fazerPedido(PEDIDOS *pedido, int *i){
+void fazerPedido(PEDIDOS *pedido,ORGANIZACAO* organizacao,CLIENTE *cliente, int *i){
     (pedido +(*i))->id_pedidos= (*i) +1;
     // listar itens
+    
+    int nPO = (organizacao+((pedido+(*i))->id_da_organizacao-1))->nP;
+    int nPC = (cliente+((pedido+(*i))->id_do_cliente-1))->nP;
 
     printf("Digite o valor do pedido: ");
     scanf("%f", &(pedido+(*i))->valor_pedido);
@@ -23,6 +26,12 @@ void fazerPedido(PEDIDOS *pedido, int *i){
 
     printf("Digite o id do funcionario: ");
     scanf("%d", &(pedido+(*i))->id_funcionario);
+
+    (organizacao+((pedido+(*i))->id_da_organizacao-1))->pedidos_efetuados[nPO] = (pedido+(*i));
+    (cliente+((pedido+(*i))->id_do_cliente-1))->pedidos[nPC] = (pedido+(*i));
+
+    ((organizacao+((pedido+(*i))->id_da_organizacao-1))->nP)++;
+    ((cliente+((pedido+(*i))->id_do_cliente-1))->nP)++;
 
     (*i)++;
 }
