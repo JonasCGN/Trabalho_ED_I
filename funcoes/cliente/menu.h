@@ -2,9 +2,9 @@ void menuCliente(CLIENTE *cliente,int *i,int qtdC){
     int opc;
 
     do{
-        printf("1 - Cadastrar Cliente\n2 - Mostrar Clientes\n");
+        printf("---------------------------\n");
+        printf("|0 - Voltar menu principal|\n|1 - Cadastrar Cliente    |\n|2 - Mostrar Clientes     |\n---------------------------\n");
         scanf("%d", &opc);
-        
         fflush(stdin);
         
         system("cls||clear");
@@ -12,6 +12,7 @@ void menuCliente(CLIENTE *cliente,int *i,int qtdC){
         switch (opc){
             case 1:
                 cadastrarCliente(cliente,i);
+                
             break;
 
             case 2:
@@ -19,7 +20,9 @@ void menuCliente(CLIENTE *cliente,int *i,int qtdC){
             break;
             
             default:
+                
                 printf("Opcao invalida!");
+               
             break;
         }
     }while(opc > 0);

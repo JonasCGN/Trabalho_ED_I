@@ -2,7 +2,8 @@ void menuFuncionario(FUNCIONARIO *funcinario,ORGANIZACAO *organizacao,int *f,int
     int opc;
 
     do{
-        printf("1 - Cadastrar Funcionario\n2 - Mostrar Funcionario\n");
+        printf("---------------------------\n");
+        printf("|0 - Voltar menu principal|\n|1 - Cadastrar Funcionario|\n|2 - Mostrar Funcionario  |\n---------------------------\n");
         scanf("%d", &opc);
 
         fflush(stdin);
