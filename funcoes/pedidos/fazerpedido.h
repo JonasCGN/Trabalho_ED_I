@@ -1,11 +1,11 @@
 void fazerPedido(PEDIDOS *pedido,ORGANIZACAO* organizacao,CLIENTE *cliente, int *i){
-    (pedido +(*i))->id_pedidos= (*i) +1;
+    (pedido +(*i))->id_pedidos= (*i) + 1;
     // listar itens
     
     int nPO;
     int nPC;
 
-    printf("Digite o valor do pedido: ");
+    printf("Digite o valor do pedido %d: ", (*i)+1);
     scanf("%f", &(pedido+(*i))->valor_pedido);
 
     printf("Digite a quantidade de pedidos feitos:");
