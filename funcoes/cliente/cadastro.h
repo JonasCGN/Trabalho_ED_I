@@ -37,6 +37,7 @@ void cadastrarCliente(CLIENTE *cliente,int *i){
     (*i)++;
 }
 
+<<<<<<< HEAD
 void mostrarclientes(int qtdc, CLIENTE * cliente){
     
     printf("----------------------------------------------\n");
@@ -55,3 +56,5 @@ void mostrarclientes(int qtdc, CLIENTE * cliente){
     }
 
 }
+=======
+>>>>>>> cf9294d5c52928e42f23a1026b5225f6623c0bac

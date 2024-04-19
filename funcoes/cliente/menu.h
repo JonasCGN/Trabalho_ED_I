@@ -20,11 +20,14 @@ void menuCliente(CLIENTE *cliente, PEDIDOS *pedidos,ORGANIZACAO *organizacao,int
             break;
 
             case 2:
-                mostrarclientes(*c,cliente);
+                mostrarclientes(*c,cliente,1);
             break;
 
             case 3:
-                fazerPedido(pedidos,organizacao,cliente,p);
+                if(qtdP > *p)
+                    fazerPedido(pedidos,organizacao,cliente,p);
+                else
+                    printf("Nao eh possivel cadastrar!");
             break;
 
             case 4:
