@@ -68,7 +68,7 @@ void listarFuncionariosOrganizacao(ORGANIZACAO* organizacao, int qtdo){
     printf("----------------------------------------------\n");
     printf("|Lista de organizacoes: \n");
     for(int i=0;i < qtdo ;i++){
-        printf("Funcionarios da organizacao %d\n",i-1);
+        printf("Funcionarios da organizacao %d\n",i);
         for(int j=0;j<(organizacao+i)->n;j++){
             printf("Funcionario %d\n", j+1);
             printf("Nome: %s\n", (organizacao+i)->funcionario[j]->pessoa->nome);

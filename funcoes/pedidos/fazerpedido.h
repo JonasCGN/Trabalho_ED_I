@@ -27,7 +27,7 @@ void fazerPedido(PEDIDOS *pedido, int *i){
     (*i)++;
 }
 
-void listapedidos(PEDIDOS * pedido,int qtd){
+void listapedidos(PEDIDOS *pedido,int qtd){
 
     printf("----------------------------------------------\n");
     printf("Lista de pedidos efetuados: \n");
@@ -45,4 +45,8 @@ void listapedidos(PEDIDOS * pedido,int qtd){
         printf("----------------------------------------------\n");
         printf("\n");
     }
+}
+
+void listarpedidosorg(ORGANIZACAO *pedidos, int idorg){        
+
 }
