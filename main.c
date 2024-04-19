@@ -13,14 +13,14 @@ int main(){
     ORGANIZACAO *organizacao;
     PEDIDOS *pedidos;
 
-    int f=0,o=0,c=0,p,oF,qtdC=1,qtdF=1,qtdP = 1,qtdO=1,qtdOF=1;
+    int f=0,o=0,c=0,p,qtdC=1,qtdF=1,qtdP = 1,qtdO=1;
 
     cliente = (CLIENTE*)malloc(qtdC*sizeof(CLIENTE));
     funcionario = (FUNCIONARIO*)malloc(qtdF*sizeof(FUNCIONARIO));
     organizacao = (ORGANIZACAO*)malloc(qtdO*sizeof(ORGANIZACAO));
     pedidos = (PEDIDOS*)malloc(qtdP * sizeof(PEDIDOS));
 
-    menu(cliente,funcionario,organizacao,pedidos,&c,&f,&o,&oF,&p,&qtdC,&qtdF,&qtdP,&qtdO,&qtdOF);
+    menu(cliente,funcionario,organizacao,pedidos,&c,&f,&o,&p,&qtdC,&qtdF,&qtdP,&qtdO);
     
     for(int i = 0;i < qtdO;i++){
         for(int j = 0; j < (organizacao+i)->quant_funcionario; j++)

@@ -1,4 +1,4 @@
-void cadastrarFuncionario(FUNCIONARIO *funcionario, ORGANIZACAO *organizacao,int *f,int *oF,int qtdO,int qtdOF){
+void cadastrarFuncionario(FUNCIONARIO *funcionario, ORGANIZACAO *organizacao,int *f,int qtdO){
     int n,id,o;
     
     alocaPessoa(&((funcionario+(*f))->pessoa));
@@ -38,16 +38,17 @@ void cadastrarFuncionario(FUNCIONARIO *funcionario, ORGANIZACAO *organizacao,int
     
     printf("\n%d - %d\n", o, (organizacao+o)->id );
 
-    (organizacao + o)->funcionario[*oF] = (funcionario+(*f));
+    (organizacao + o)->funcionario[(organizacao+o)->n] = (funcionario+(*f));
 
     printf("3");
 
-    (*oF)++;
+    ((organizacao+o)->n)++;
 
     (*f)++;
 
-    if((*oF) >= qtdOF-1){
-        realocaMatFucionario(&((organizacao+o)->funcionario), (*oF));
+    if((organizacao+o)->n >= ((organizacao+o)->quant_funcionario)){
+        ((organizacao+o)->quant_funcionario)++;
+        realocaMatFucionario(&((organizacao+o)->funcionario), ((organizacao+o)->quant_funcionario));
     }
 }
 

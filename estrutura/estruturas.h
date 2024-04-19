@@ -23,6 +23,7 @@ typedef struct{
 
 typedef struct{
     int id;
+    int n;
     int quant_funcionario ;
     FUNCIONARIO **funcionario;
     char nome[50];

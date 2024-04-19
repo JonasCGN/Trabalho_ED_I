@@ -1,4 +1,4 @@
-void menuFuncionario(FUNCIONARIO *funcinario,ORGANIZACAO *organizacao,int *f,int *oF,int qtdF,int qtdO,int qtdOF){
+void menuFuncionario(FUNCIONARIO *funcinario,ORGANIZACAO *organizacao,int *f,int qtdF,int qtdO){
     int opc;
 
     do{
@@ -12,7 +12,7 @@ void menuFuncionario(FUNCIONARIO *funcinario,ORGANIZACAO *organizacao,int *f,int
 
         switch (opc){
             case 1:
-                cadastrarFuncionario(funcinario,organizacao,f,oF,qtdO,qtdOF);
+                cadastrarFuncionario(funcinario,organizacao,f,qtdO);
                 qtdF += 1;
                 realocafuncionario(&(funcinario),qtdF);
             break;

@@ -7,7 +7,7 @@
 #include "../funcionario/menu.h"
 
 
-void menu(CLIENTE *cliente,FUNCIONARIO *funcionario,ORGANIZACAO *organizcao,PEDIDOS *pedidos,int *c,int *f,int *o,int *oF,int *p,int *qtdC,int *qtdF,int *qtdP,int *qtdO,int *qtdOF){ 
+void menu(CLIENTE *cliente,FUNCIONARIO *funcionario,ORGANIZACAO *organizcao,PEDIDOS *pedidos,int *c,int *f,int *o,int *p,int *qtdC,int *qtdF,int *qtdP,int *qtdO){ 
     int op;
 
     do{
@@ -27,7 +27,7 @@ void menu(CLIENTE *cliente,FUNCIONARIO *funcionario,ORGANIZACAO *organizcao,PEDI
             
             break;  
             case 2:
-                menuFuncionario(funcionario,organizcao,f,oF,*qtdF,*qtdO,*qtdOF);
+                menuFuncionario(funcionario,organizcao,f,*qtdF,*qtdO);
             break;
             
             case 3:

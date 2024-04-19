@@ -12,6 +12,8 @@ void cadastrarOrganizacao(ORGANIZACAO *organizacao,int *o){
     printf("Quantas funcionarios tem na organizacao: ");
     scanf("%d", &((organizacao+(*o))->quant_funcionario));
     
+    (organizacao+(*o))->n = 0;
+
     alocaMatFucionario(&((organizacao+(*o))->funcionario),((organizacao+(*o))->quant_funcionario));
 
     // pedidos efetuados pela org
