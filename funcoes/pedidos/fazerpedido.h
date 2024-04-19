@@ -5,7 +5,7 @@ void fazerPedido(PEDIDOS *pedido,ORGANIZACAO* organizacao,CLIENTE *cliente, int 
     int nPO;
     int nPC;
 
-    printf("Digite o valor do pedido %d: ", (*i)+1);
+    printf("Digite o valor do pedido: ");
     scanf("%f", &(pedido+(*i))->valor_pedido);
 
     printf("Digite a quantidade de pedidos feitos:");
