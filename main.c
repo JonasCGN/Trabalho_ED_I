@@ -20,7 +20,7 @@ int main(){
     organizacao = (ORGANIZACAO*)malloc(qtdO*sizeof(ORGANIZACAO));
     pedidos = (PEDIDOS*)malloc(sizeof(PEDIDOS));
 
-    menu(cliente,funcionario,organizacao,&f,&o,&c,&oF,&qtdC,&qtdF,&qtdO,&qtdOF);
+    menu(cliente,funcionario,organizacao,pedidos,&f,&o,&c,&oF,&qtdC,&qtdF,&qtdO,&qtdOF);
     
     liberaPessoa(organizacao->funcionario->pessoa);
     liberarFuncionario(organizacao->funcionario);

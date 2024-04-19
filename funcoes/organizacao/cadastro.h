@@ -17,7 +17,7 @@ void cadastrarOrganizacao(ORGANIZACAO *organizacao,int *o){
 
     // pedidos efetuados pela org
 
-    printf("Qual o tipo da sua organizacao:\n1 - Publico\n2 - Privado");
+    printf("Qual o tipo da sua organizacao:\n1 - Publico\n2 - Privado\n");
     opc = getche();
     
     switch (opc){
