@@ -15,8 +15,8 @@ void cadastrarFuncionario(FUNCIONARIO *funcionario, ORGANIZACAO *organizacao,int
     scanf("%f",&(funcionario + (*f))->salario);
 
     do{
-        printf("Digite o tipo de funcionario: ");
-        printf("\n1 - Gerente\n2 - Supervisor\n3 - Vendedor");
+        printf("Digite o tipo de funcionario:  ");
+        printf("\n1 - Gerente \n2 - Supervisor \n3 - Vendedor ");
         scanf("%d",&n);
     }while(n < 1 || n > 3);
 
@@ -53,21 +53,23 @@ void cadastrarFuncionario(FUNCIONARIO *funcionario, ORGANIZACAO *organizacao,int
 void mostarfuncionario(int qtdf, FUNCIONARIO *funcionarios){
 
     printf("----------------------------------------------\n");
-    printf("|Lista de Funcionarios: \n");
+    printf("Lista de Funcionarios: \n");
+    printf("----------------------------------------------\n");
     for(int i = 0; i < qtdf; i++){
-        printf("|Funcionario %d: \n",i + 1);
-        printf("|ID: %d\n",funcionarios[i].pessoa->id);
-        printf("|Nome: %s\n",funcionarios[i].pessoa->nome);
-        printf("|Idade: %d\n",funcionarios[i].pessoa->idade);
-        printf("|Salario: %.2f\n",funcionarios[i].salario);
-        printf("|ID da organizacao: %d\n",funcionarios[i].id_organizacao);
+        printf("Funcionario %d: \n",i + 1);
+        printf("\n");
+        printf("ID: %d\n",funcionarios[i].pessoa->id);
+        printf("Nome: %s\n",funcionarios[i].pessoa->nome);
+        printf("Idade: %d\n",funcionarios[i].pessoa->idade);
+        printf("Salario: %.2f\n",funcionarios[i].salario);
+        printf("ID da organizacao: %d\n",funcionarios[i].id_organizacao);
         if(funcionarios[i].tipo == 0){
-            printf("|Tipo: Gerente\n");
+            printf("Tipo: Gerente\n");
         }else if (funcionarios[i].tipo == 1)
         {
-          printf("|Tipo: Supervisor\n");
+          printf("Tipo: Supervisor\n");
         }else{
-            printf("|Tipo: Vendedor\n");
+            printf("Tipo: Vendedor\n");
         }
         printf("----------------------------------------------\n");
         printf("\n");

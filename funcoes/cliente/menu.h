@@ -3,7 +3,7 @@ void menuCliente(CLIENTE *cliente, PEDIDOS *pedidos,ORGANIZACAO *organizacao,int
 
     do{
         printf("---------------------------\n");
-        printf("|0 - Voltar menu principal|\n|1 - Cadastrar Cliente    |\n|2 - Mostrar Clientes     |\n|3 - Fazer pedido         |\n|4 - Lista pedidos        |\n|5 - Lista pedido cliente |\n---------------------------\n");
+        printf("0 - Voltar menu principal\n---------------------------\n1 - Cadastrar Cliente\n---------------------------\n2 - Mostrar Clientes\n---------------------------\n3 - Fazer pedido\n---------------------------\n4 - Lista pedidos\n---------------------------\n5 - Lista pedido cliente\n---------------------------\n");
         scanf("%d", &opc);
         fflush(stdin);
         
@@ -41,7 +41,7 @@ void menuCliente(CLIENTE *cliente, PEDIDOS *pedidos,ORGANIZACAO *organizacao,int
             break;
 
             default:
-                printf("Opcao invalida!");
+                printf("\n");
             break;
         }
     }while(opc > 0);

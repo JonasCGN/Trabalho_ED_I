@@ -3,7 +3,7 @@ void menuFuncionario(FUNCIONARIO *funcinario,ORGANIZACAO *organizacao,int *f,int
 
     do{
         printf("---------------------------\n");
-        printf("|0 - Voltar menu principal|\n|1 - Cadastrar Funcionario|\n|2 - Mostrar Funcionario  |\n---------------------------\n");
+        printf("0 - Voltar menu principal\n---------------------------\n1 - Cadastrar Funcionario\n---------------------------\n2 - Mostrar Funcionario\n---------------------------\n");
         scanf("%d", &opc);
 
         fflush(stdin);
@@ -25,7 +25,7 @@ void menuFuncionario(FUNCIONARIO *funcinario,ORGANIZACAO *organizacao,int *f,int
             break;
             
             default:
-                printf("Opcao Invalida!");
+                printf("\n");
             break;
         }
     }while(opc > 0);

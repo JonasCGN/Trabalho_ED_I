@@ -3,8 +3,7 @@ void menuOrganizacao(ORGANIZACAO *organizacao,int *o,int *qtdO){
 
     do{
         printf("-------------------------------------\n");
-        printf("|0 - Voltar menu principal          |\n|1 - Cadastrar Organizacao          |\n|2 - Mostrar Organizacao            |\n|3 - Listar Funcionarios Organizacao|\n|4 - Listar Pedidos da Organizacao  |");
-        printf("\n-------------------------------------\n");
+        printf("0 - Voltar menu principal\n-------------------------------------\n1 - Cadastrar Organizacao\n-------------------------------------\n2 - Mostrar Organizacao\n-------------------------------------\n3 - Listar Funcionarios Organizacao\n-------------------------------------\n4 - Listar Pedidos da Organizacao\n-------------------------------------\n");
         scanf("%d", &opc);
         
         fflush(stdin);
@@ -37,7 +36,7 @@ void menuOrganizacao(ORGANIZACAO *organizacao,int *o,int *qtdO){
             break;
             
             default:
-                printf("Opcao Invalida!");
+                printf("\n");
             break;
         }
     }while(opc > 0);

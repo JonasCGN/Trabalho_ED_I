@@ -12,9 +12,10 @@ void menu(CLIENTE *cliente,FUNCIONARIO *funcionario,ORGANIZACAO *organizacao,PED
     int op;
 
     do{
-
+        printf("---------------------------\n");
         printf("BEM VINDO AO SISTEMA!!\n");
-        printf("1 - Menu Cliente\n2 - Menu Funcionario \n3 - Menu Organizcao:");
+        printf("---------------------------\n");
+        printf("1 - Menu Cliente\n---------------------------\n2 - Menu Funcionario \n---------------------------\n3 - Menu Organizcao\n---------------------------\n");
         scanf("%d",&op);
 
         fflush(stdin);
@@ -35,7 +36,7 @@ void menu(CLIENTE *cliente,FUNCIONARIO *funcionario,ORGANIZACAO *organizacao,PED
             break;
 
             default:
-                printf("Opcao invalida!");
+                printf("\n");
             break;
         }   
     }while(op > 0);
