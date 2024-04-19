@@ -37,6 +37,7 @@ void fazerPedido(PEDIDOS *pedido,ORGANIZACAO* organizacao,CLIENTE *cliente, int 
     (pedido+(*i))->id_da_organizacao = nPO;
 
     (organizacao+(nPO - 1))->pedidos_efetuados[((organizacao+(nPO - 1))->nP)] = (pedido+(*i));
+    
     (cliente+(nPC-1))->pedidos[(cliente+(nPC-1))->nP] = (pedido+(*i));
 
     ((organizacao+(nPO - 1))->nP)++;
