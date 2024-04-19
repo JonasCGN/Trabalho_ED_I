@@ -1,5 +1,5 @@
 void fazerPedido(PEDIDOS *pedido,ORGANIZACAO* organizacao,CLIENTE *cliente, int *i){
-    (pedido +(*i))->id_pedidos= (*i) +1;
+    (pedido +(*i))->id_pedidos= (*i) + 1;
     // listar itens
     
     int nPO;

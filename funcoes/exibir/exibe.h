@@ -154,8 +154,8 @@ void listarPedidosCliente(CLIENTE *cliente, int idcliente){
 
         printf("Valor do pedido: %.2f\n",(cliente+idcliente)->pedidos[i]->valor_pedido);
         printf("Id do cliente: %d\n",(cliente+idcliente)->pedidos[i]->id_do_cliente);
-        printf("Id da organizacao\n: %d",(cliente+idcliente)->pedidos[i]->id_da_organizacao);    
-        printf("Id do funcionario\n: %d",(cliente+idcliente)->pedidos[i]->id_funcionario);
+        printf("Id da organizacao: %d\n",(cliente+idcliente)->pedidos[i]->id_da_organizacao);    
+        printf("Id do funcionario: %d\n",(cliente+idcliente)->pedidos[i]->id_funcionario);
          printf("----------------------------------------------\n");
     }
 
