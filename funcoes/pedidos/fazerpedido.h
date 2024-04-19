@@ -13,6 +13,8 @@ void fazerPedido(PEDIDOS *pedido,ORGANIZACAO* organizacao,CLIENTE *cliente, int 
 
     alocacaoItemPedido(&((pedido+(*i))->item), (pedido+(*i))->pedidos_efetuados);
 
+    fflush(stdin);
+
     for(int j=0;j<(pedido+(*i))->pedidos_efetuados;j++){
         printf("Digite o pedido %d:",j+1);
         gets((pedido+(*i))->item[j]);
@@ -27,12 +29,13 @@ void fazerPedido(PEDIDOS *pedido,ORGANIZACAO* organizacao,CLIENTE *cliente, int 
     printf("Digite o id do funcionario: ");
     scanf("%d", &(pedido+(*i))->id_funcionario);
 
+    
     (organizacao+((pedido+(*i))->id_da_organizacao-1))->pedidos_efetuados[nPO] = (pedido+(*i));
     (cliente+((pedido+(*i))->id_do_cliente-1))->pedidos[nPC] = (pedido+(*i));
-
+   
     ((organizacao+((pedido+(*i))->id_da_organizacao-1))->nP)++;
     ((cliente+((pedido+(*i))->id_do_cliente-1))->nP)++;
-
+   
     (*i)++;
 }
 
@@ -56,6 +59,4 @@ void listapedidos(PEDIDOS *pedido,int qtd){
     }
 }
 
-void listarpedidosorg(ORGANIZACAO *pedidos, int idorg){        
 
-}
