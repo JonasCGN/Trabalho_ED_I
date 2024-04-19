@@ -3,7 +3,7 @@ void menuOrganizacao(ORGANIZACAO *organizacao,int *o,int *qtdO){
 
     do{
         printf("---------------------------\n");
-        printf("|0 -Voltar menu principal  |\n|1 - Cadastrar Organizacao |\n|2 - Mostrar Organizacao   |\n|3 - Listar Funcionarios Organizacao|");
+        printf("|0 -Voltar menu principal  |\n|1 - Cadastrar Organizacao |\n|2 - Mostrar Organizacao   |\n|3 - Listar Funcionarios Organizacao|\n|4 - Listar Pedidos da Organizacao|");
         scanf("%d", &opc);
         
         fflush(stdin);
@@ -26,6 +26,13 @@ void menuOrganizacao(ORGANIZACAO *organizacao,int *o,int *qtdO){
 
             case 3:
                 listarFuncionariosOrganizacao(organizacao,*o);
+            break;
+
+            case 4:
+                int n;
+                printf("Digite o id da org:");
+                scanf("%d", &n);
+                listarpedidosorg(organizacao,n);
             break;
             
             default:

@@ -12,7 +12,7 @@ void cadastrarOrganizacao(ORGANIZACAO *organizacao,int *o){
     printf("Quantas funcionarios tem na organizacao: ");
     scanf("%d", &((organizacao+(*o))->quant_funcionario));
    
-    printf("Quantas funcionarios tem na organizacao: ");
+    printf("Quantas pedidos quer salvar na organizacao:");
     scanf("%d", &((organizacao+(*o))->quant_pedidos));
 
     (organizacao+(*o))->nF = 0;
@@ -70,14 +70,9 @@ void listarFuncionariosOrganizacao(ORGANIZACAO* organizacao, int qtdo){
     printf("----------------------------------------------\n");
     printf("|Lista de organizacoes: \n");
     for(int i=0;i < qtdo ;i++){
-<<<<<<< HEAD
-        printf("Funcionarios da organizacao %d\n",i);
-        for(int j=0;j<(organizacao+i)->n;j++){
-=======
         printf("Funcionarios da organizacao %d\n",i+1);
         for(int j=0;j<(organizacao+i)->nF;j++){
 
->>>>>>> 4fcc8e3f46e847d45312fe7f30d34a8950f31828
             printf("Funcionario %d\n", j+1);
             printf("Nome: %s\n", (organizacao+i)->funcionario[j]->pessoa->nome);
             printf("Idade: %d\n", (organizacao+i)->funcionario[j]->pessoa->idade);
