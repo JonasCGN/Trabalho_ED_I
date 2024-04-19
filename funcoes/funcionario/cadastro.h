@@ -30,7 +30,7 @@ void cadastrarFuncionario(FUNCIONARIO *funcionario, ORGANIZACAO *organizacao,int
     printf("1");
     for(int i=0;i<qtdO;i++){
         if((organizacao+i)->id == id){
-            o = i ;
+            o = i;
             printf("Entrei");
             break;
         }
@@ -38,15 +38,16 @@ void cadastrarFuncionario(FUNCIONARIO *funcionario, ORGANIZACAO *organizacao,int
     
     printf("\n%d - %d\n", o, (organizacao+o)->id );
 
-    (organizacao + o)->funcionario[(*oF)] = funcionario[*f];
+    (organizacao + o)->funcionario[*oF] = (funcionario+(*f));
 
     printf("3");
 
     (*oF)++;
+
     (*f)++;
 
     if((*oF) >= qtdOF-1){
-        realocafuncionario(&((organizacao+o)->funcionario), (*oF)+2);
+        realocaMatFucionario(&((organizacao+o)->funcionario), (*oF));
     }
 }
 

@@ -6,24 +6,29 @@
 #include "./estrutura/estruturas.h"
 #include "./alocacao/alocacao.h"
 #include "./funcoes/menu/menu_principal.h"
-// não esta cadastrando mais de um cliente
+
 int main(){
     CLIENTE *cliente;
     FUNCIONARIO *funcionario;
     ORGANIZACAO *organizacao;
     PEDIDOS *pedidos;
 
-    int f=0,o=0,c=0,oF,qtdC=1,qtdF=1,qtdO=2,qtdOF=2;
+    int f=0,o=0,c=0,p,oF,qtdC=1,qtdF=1,qtdP = 1,qtdO=1,qtdOF=1;
 
     cliente = (CLIENTE*)malloc(qtdC*sizeof(CLIENTE));
     funcionario = (FUNCIONARIO*)malloc(qtdF*sizeof(FUNCIONARIO));
     organizacao = (ORGANIZACAO*)malloc(qtdO*sizeof(ORGANIZACAO));
-    pedidos = (PEDIDOS*)malloc(sizeof(PEDIDOS));
+    pedidos = (PEDIDOS*)malloc(qtdP * sizeof(PEDIDOS));
 
-    menu(cliente,funcionario,organizacao,pedidos,&f,&o,&c,&oF,&qtdC,&qtdF,&qtdO,&qtdOF);
+    menu(cliente,funcionario,organizacao,pedidos,&c,&f,&o,&oF,&p,&qtdC,&qtdF,&qtdP,&qtdO,&qtdOF);
     
-    liberaPessoa(organizacao->funcionario->pessoa);
-    liberarFuncionario(organizacao->funcionario);
+    for(int i = 0;i < qtdO;i++){
+        for(int j = 0; j < (organizacao+i)->quant_funcionario; j++)
+            liberaPessoa((organizacao+i)->funcionario[j]->pessoa);
+
+        liberarFuncionarioOrg((organizacao+i)->funcionario,(organizacao+i)->quant_funcionario);
+    }
+
     liberarOrganizacao(organizacao);
 
     liberaPessoa(funcionario->pessoa);

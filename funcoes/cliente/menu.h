@@ -1,6 +1,5 @@
-void menuCliente(CLIENTE *cliente,int *i,int qtdC, PEDIDOS *pedidos){
+void menuCliente(CLIENTE *cliente, PEDIDOS *pedidos,int *c,int *p,int qtdC,int qtdP){
     int opc;
-    int numero_pedido = pedidos->pedidos_efetuados;
 
     do{
         printf("---------------------------\n");
@@ -12,7 +11,7 @@ void menuCliente(CLIENTE *cliente,int *i,int qtdC, PEDIDOS *pedidos){
         
         switch (opc){
             case 1:
-                cadastrarCliente(cliente,i);
+                cadastrarCliente(cliente,c);
                 qtdC += 1;
                 realocaCliente(&(cliente),qtdC);
             break;
@@ -22,7 +21,11 @@ void menuCliente(CLIENTE *cliente,int *i,int qtdC, PEDIDOS *pedidos){
             break;
 
             case 3:
-                fazerPedido(pedidos,numero_pedido);
+                fazerPedido(pedidos,p);
+            break;
+
+            case 4:
+                listapedidos(pedidos,qtdP);
             break;
 
             default:

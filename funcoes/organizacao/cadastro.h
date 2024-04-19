@@ -1,6 +1,5 @@
 void cadastrarOrganizacao(ORGANIZACAO *organizacao,int *o){
     char opc;
-    int qtd;
     
     (organizacao+(*o))->id = (*o)+1;
 
@@ -11,9 +10,9 @@ void cadastrarOrganizacao(ORGANIZACAO *organizacao,int *o){
     scanf("%f",&(organizacao+(*o))->faturamento);
 
     printf("Quantas funcionarios tem na organizacao: ");
-    scanf("%d", &qtd);
+    scanf("%d", &((organizacao+(*o))->quant_funcionario));
     
-    alocarfuncionario(&((organizacao+(*o))->funcionario),qtd);
+    alocaMatFucionario(&((organizacao+(*o))->funcionario),((organizacao+(*o))->quant_funcionario));
 
     // pedidos efetuados pela org
 
