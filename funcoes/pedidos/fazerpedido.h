@@ -32,7 +32,7 @@ void listapedidos(PEDIDOS * pedido,int qtd){
     printf("----------------------------------------------\n");
     printf("Lista de pedidos efetuados: \n");
 
-    for(int i = 0; i < qtd; i++){
+    for(int i = 0; i < qtd-1; i++){
         printf("|ID do pedido: %d\n",(pedido+i)->id_pedidos);
 
         for(int j = 0;j < (pedido+i)->pedidos_efetuados;j++)

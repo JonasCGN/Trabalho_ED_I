@@ -1,5 +1,5 @@
 void cadastrarCliente(CLIENTE *cliente,int *i){
-
+int sup = 0;
     alocaPessoa(&((cliente+(*i))->pessoa));
 
     (cliente+(*i))->pessoa->id = (*i)+1;
@@ -10,7 +10,14 @@ void cadastrarCliente(CLIENTE *cliente,int *i){
     fflush(stdin);
     
     printf("Digite a idade do cliente: ");
-    scanf("%d",&(cliente+(*i))->pessoa->idade);
+    scanf("%d", &sup);
+    
+    do{
+        printf(" APENSAS MAIOR DE IDADE!!!\n");
+        printf("Digite a idade do cliente: ");
+        scanf("%d", &sup);
+    } while (sup <18);
+    (cliente+(*i))->pessoa->idade  = sup;
     
     fflush(stdin);
 
@@ -20,6 +27,10 @@ void cadastrarCliente(CLIENTE *cliente,int *i){
     fflush(stdin);
     
     (*i)++;
+<<<<<<< HEAD
+=======
+   
+>>>>>>> edcb76a50bec0b8b2e3c60fd470fa18bcaad1283
 }
 
 void mostrarclientes(int qtdc, CLIENTE * cliente){
