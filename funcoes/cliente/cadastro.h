@@ -14,9 +14,7 @@ void cadastrarCliente(CLIENTE *cliente,int *i){
     scanf("%f", &(cliente+(*i))->limite_de_credito);
     
     (*i)++;
-    /*
-        Registrar pedidos
-    */
+
 }
 
 void mostrarclientes(int qtdc, CLIENTE * cliente){
