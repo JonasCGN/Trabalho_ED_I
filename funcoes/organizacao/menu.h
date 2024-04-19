@@ -4,6 +4,8 @@ void menuOrganizacao(ORGANIZACAO *organizacao,int *o,int qtdO){
     printf("1 - Cadastrar Organizacao\n2 - Mostrar Organizacao\n");
     scanf("%d", &opc);
     
+    system("cls||clear");
+    
     switch (opc){
         case '1':
             cadastrarOrganizacao(organizacao, o);

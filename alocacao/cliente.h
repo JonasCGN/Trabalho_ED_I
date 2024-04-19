@@ -6,3 +6,6 @@ void alocacaoCliente(CLIENTE **cliente,int i){
     }
 }
 
+void liberarCliente(CLIENTE *cliente){
+    free(cliente);
+}

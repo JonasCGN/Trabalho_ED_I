@@ -14,3 +14,6 @@ void realocafuncionario(FUNCIONARIO **funcionario,int i){
     }
 }
 
+void liberarFuncionario(FUNCIONARIO *funcionario){
+    free(funcionario);
+}
