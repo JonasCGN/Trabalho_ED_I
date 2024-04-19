@@ -35,9 +35,9 @@ void menuCliente(CLIENTE *cliente, PEDIDOS *pedidos,ORGANIZACAO *organizacao,int
             break;
 
             case 5:
-                printf("Digite o pedido do cliente:");
+                printf("Digite o id do cliente:");
                 scanf("%d", &n);
-                listarPedidosCliente(cliente,n);
+                listarPedidosCliente(cliente,n-1);
             break;
 
             default:

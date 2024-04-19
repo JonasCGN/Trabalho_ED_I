@@ -33,7 +33,7 @@ void menuOrganizacao(ORGANIZACAO *organizacao,int *o,int *qtdO){
 
                 printf("Digite o id da org:");
                 scanf("%d", &n);
-                listarpedidosorg(organizacao,n);
+                listarpedidosorg(organizacao,n-1);
             break;
             
             default:

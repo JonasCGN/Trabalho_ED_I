@@ -18,8 +18,11 @@ void alocaMatPedido(PEDIDOS ***pedidos,int qtd){
     }
 }
 
-void realocaPedido(PEDIDOS **pedido,int qtdP){
-    *pedido = (PEDIDOS*)realloc(*pedido,qtdP * sizeof(PEDIDOS));
+void liberarPedido(PEDIDOS **pedido,int qtd){
+    for(int i=0;i<qtd;i++)
+        free(pedido[i]);
+
+    free(pedido);
 }
 
 void liberarPedido(PEDIDOS *pedido){
