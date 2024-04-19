@@ -12,15 +12,6 @@ typedef struct{
 }FUNCIONARIO;
 
 typedef struct{
-    int id;
-    int quant_funcionario ;
-    FUNCIONARIO *funcionario;
-    char nome[50];
-    float faturamento;
-    int tipo;
-}ORGANIZACAO;
-
-typedef struct{
     int id_pedidos;
     char item[50];
     float valor_pedido;
@@ -30,6 +21,15 @@ typedef struct{
     int id_funcionario; 
 }PEDIDOS;
 
+typedef struct{
+    int id;
+    int quant_funcionario ;
+    FUNCIONARIO *funcionario;
+    char nome[50];
+    float faturamento;
+    int tipo;
+    PEDIDOS *pedidos_efetuados;
+}ORGANIZACAO;
 typedef struct{
     PESSOA *pessoa;
     float limite_de_credito;

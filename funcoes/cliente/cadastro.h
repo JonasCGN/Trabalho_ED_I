@@ -1,7 +1,5 @@
 void cadastrarCliente(CLIENTE *cliente,int *i){
 
-    alocaPessoa(&((cliente+(*i))->pessoa));
-    
     (cliente+(*i))->pessoa->id = (*i)+1;
 
     printf("Digite o nome do cliente:");
@@ -10,10 +8,15 @@ void cadastrarCliente(CLIENTE *cliente,int *i){
     printf("Digite a idade do cliente:");
     scanf("%d",&(cliente+(*i))->pessoa->idade);
     
+    fflush(stdin);
+
     printf("Digite o limite de credito do cliente:");
     scanf("%f", &(cliente+(*i))->limite_de_credito);
     
+    fflush(stdin);
+    
     (*i)++;
+    
     /*
         Registrar pedidos
     */
@@ -23,7 +26,7 @@ void mostrarclientes(int qtdc, CLIENTE * cliente){
     
     printf("Lista de Clientes: \n");
 
-    for(int i = 0; i < qtdc; i++){
+    for(int i = 0; i < qtdc-1; i++){
         printf("Cliente %d: \n",i + 1);
         printf(" ID: %d\n",cliente[i].pessoa->id);
         printf(" Nome: %s\n",cliente[i].pessoa->nome);
