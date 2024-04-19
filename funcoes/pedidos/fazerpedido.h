@@ -21,17 +21,17 @@ void fazerPedido(PEDIDOS *pedido,ORGANIZACAO* organizacao,CLIENTE *cliente, int 
     printf("Digite o id do cliente: ");
     scanf("%d", &(pedido+(*i))->id_do_cliente);
 
-    printf("Digite o id da organização: ");
+    printf("Digite o id da organizacao: ");
     scanf("%d", &(pedido+(*i))->id_da_organizacao);
 
     printf("Digite o id do funcionario: ");
     scanf("%d", &(pedido+(*i))->id_funcionario);
 
-    (organizacao+((pedido+(*i))->id_da_organizacao-1))->pedidos_efetuados[nPO] = (pedido+(*i));
-    (cliente+((pedido+(*i))->id_do_cliente-1))->pedidos[nPC] = (pedido+(*i));
+    (organizacao+((pedido+(*i))->id_da_organizacao - 1))->pedidos_efetuados[nPO] = (pedido+(*i));
+    (cliente+((pedido+(*i))->id_do_cliente - 1))->pedidos[nPC] = (pedido+(*i));
 
-    ((organizacao+((pedido+(*i))->id_da_organizacao-1))->nP)++;
-    ((cliente+((pedido+(*i))->id_do_cliente-1))->nP)++;
+    ((organizacao+((pedido+(*i))->id_da_organizacao - 1))->nP)++;
+    ((cliente+((pedido+(*i))->id_do_cliente - 1))->nP)++;
 
     (*i)++;
 }
