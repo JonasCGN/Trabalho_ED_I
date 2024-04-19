@@ -31,7 +31,7 @@ void menuCliente(CLIENTE *cliente, PEDIDOS *pedidos,ORGANIZACAO *organizacao,int
             break;
 
             case 4:
-                listapedidos(pedidos,*p);
+                listaPedidos(pedidos,*p);
             break;
 
             case 5:
