@@ -1,12 +1,13 @@
+#include "../pedidos/fazerpedido.h"
 #include "../cliente/cadastro.h"
 #include "../cliente/menu.h"
 #include "../organizacao/cadastro.h"
 #include "../organizacao/menu.h"
 #include "../funcionario/cadastro.h"
 #include "../funcionario/menu.h"
-#include "../pedidos/fazerpedido.h"
 
-void menu(CLIENTE *cliente,FUNCIONARIO *funcionario,ORGANIZACAO *organizcao,int *f,int *o,int *c,int *oF,int *qtdC,int *qtdF,int *qtdO,int *qtdOF){ 
+
+void menu(CLIENTE *cliente,FUNCIONARIO *funcionario,ORGANIZACAO *organizcao,PEDIDOS *pedidos,int *f,int *o,int *c,int *oF,int *qtdC,int *qtdF,int *qtdO,int *qtdOF){ 
     int op;
 
     do{
@@ -21,7 +22,7 @@ void menu(CLIENTE *cliente,FUNCIONARIO *funcionario,ORGANIZACAO *organizcao,int 
 
         switch (op){
             case 1:
-                menuCliente(cliente,c,*qtdC);
+                menuCliente(cliente,c,*qtdC,pedidos);
             break;
             
             break;  
@@ -39,5 +40,4 @@ void menu(CLIENTE *cliente,FUNCIONARIO *funcionario,ORGANIZACAO *organizcao,int 
         }   
     }while(op > 0);
 
-    
 }
