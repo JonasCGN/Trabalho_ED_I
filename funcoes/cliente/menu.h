@@ -3,7 +3,7 @@ void menuCliente(CLIENTE *cliente, PEDIDOS *pedidos,ORGANIZACAO *organizacao,int
 
     do{
         printf("---------------------------\n");
-        printf("|0 - Voltar menu principal|\n|1 - Cadastrar Cliente    |\n|2 - Mostrar Clientes     |\n|3 - Fazer pedido         |\n|4 - Lista pedidos         |\n|5 - Lista pedido cliente         |---------------------------\n");
+        printf("|0 - Voltar menu principal|\n|1 - Cadastrar Cliente    |\n|2 - Mostrar Clientes     |\n|3 - Fazer pedido         |\n|4 - Lista pedidos        |\n|5 - Lista pedido cliente |\n---------------------------\n");
         scanf("%d", &opc);
         fflush(stdin);
         

@@ -2,8 +2,9 @@ void menuOrganizacao(ORGANIZACAO *organizacao,int *o,int *qtdO){
     int opc,n;
 
     do{
-        printf("---------------------------\n");
-        printf("|0 -Voltar menu principal  |\n|1 - Cadastrar Organizacao |\n|2 - Mostrar Organizacao   |\n|3 - Listar Funcionarios Organizacao|\n|4 - Listar Pedidos da Organizacao|");
+        printf("-------------------------------------\n");
+        printf("|0 - Voltar menu principal          |\n|1 - Cadastrar Organizacao          |\n|2 - Mostrar Organizacao            |\n|3 - Listar Funcionarios Organizacao|\n|4 - Listar Pedidos da Organizacao  |");
+        printf("\n-------------------------------------\n");
         scanf("%d", &opc);
         
         fflush(stdin);
