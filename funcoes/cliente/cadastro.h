@@ -18,9 +18,13 @@ void cadastrarCliente(CLIENTE *cliente,int *i){
         printf(" APENSAS MAIOR DE IDADE!!!\n");
         printf("Digite a idade do cliente: ");
         scanf("%d", &sup);
+<<<<<<< HEAD
+    } while (sup < 18);
+=======
 
     } while (sup <18);
 
+>>>>>>> a8e9f12b5546e2f11b52ab476206c1429194fa4f
     (cliente+(*i))->pessoa->idade  = sup;
     
     fflush(stdin);
