@@ -1,5 +1,5 @@
 void menuCliente(CLIENTE *cliente, PEDIDOS *pedidos,ORGANIZACAO *organizacao,int *c,int *p,int qtdC,int qtdP){
-    int opc;
+    int opc,n;
 
     do{
         printf("---------------------------\n");
@@ -32,7 +32,6 @@ void menuCliente(CLIENTE *cliente, PEDIDOS *pedidos,ORGANIZACAO *organizacao,int
             break;
 
             case 5:
-                int n;
                 printf("Digite o pedido do cliente:");
                 scanf("%d", &n);
                 listarPedidosCliente(cliente,n);

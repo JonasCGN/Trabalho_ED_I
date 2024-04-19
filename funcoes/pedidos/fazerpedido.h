@@ -64,16 +64,16 @@ void listarpedidosorg(ORGANIZACAO *organizacao, int idorg){
         
         for(int j=0;j < ((organizacao+(idorg-1))->pedidos_efetuados[i]->pedidos_efetuados); j++){
             printf("Pedido %d", j+1);
-            printf("Nome: %d",(organizacao+(idorg-1))->pedidos_efetuados[i]->item[j]);
+            printf("Nome: %s",(organizacao+(idorg-1))->pedidos_efetuados[i]->item[j]);
         }
 
-        printf("Valor do pedido:",(organizacao+(idorg-1))->pedidos_efetuados[i]->valor_pedido);
+        printf("Valor do pedido: %d",(organizacao+(idorg-1))->pedidos_efetuados[i]->valor_pedido);
 
-        printf("Id do cliente:",(organizacao+(idorg-1))->pedidos_efetuados[i]->id_do_cliente);
+        printf("Id do cliente: %d",(organizacao+(idorg-1))->pedidos_efetuados[i]->id_do_cliente);
         
-        printf("Id da organizacao:",(organizacao+(idorg-1))->pedidos_efetuados[i]->id_da_organizacao);
+        printf("Id da organizacao: %d",(organizacao+(idorg-1))->pedidos_efetuados[i]->id_da_organizacao);
         
-        printf("Id do funcionario:",(organizacao+(idorg-1))->pedidos_efetuados[i]->id_funcionario);
+        printf("Id do funcionario: %d",(organizacao+(idorg-1))->pedidos_efetuados[i]->id_funcionario);
 
     }
 }
@@ -85,13 +85,13 @@ void listarPedidosCliente(CLIENTE *cliente, int idcliente){
         
         for(int j=0;j < ((cliente+(idcliente-1))->pedidos[i]->pedidos_efetuados); j++){
             printf("Pedido %d", j+1);
-            printf("Nome: %d",(cliente+(idcliente-1))->pedidos[i]->item[j]);
+            printf("Nome: %s",(cliente+(idcliente-1))->pedidos[i]->item[j]);
         }
 
-        printf("Valor do pedido:",(cliente+(idcliente-1))->pedidos[i]->valor_pedido);
-        printf("Id do cliente:",(cliente+(idcliente-1))->pedidos[i]->id_do_cliente);
-        printf("Id da organizacao:",(cliente+(idcliente-1))->pedidos[i]->id_da_organizacao);    
-        printf("Id do funcionario:",(cliente+(idcliente-1))->pedidos[i]->id_funcionario);
+        printf("Valor do pedido: %d",(cliente+(idcliente-1))->pedidos[i]->valor_pedido);
+        printf("Id do cliente: %d",(cliente+(idcliente-1))->pedidos[i]->id_do_cliente);
+        printf("Id da organizacao: %d",(cliente+(idcliente-1))->pedidos[i]->id_da_organizacao);    
+        printf("Id do funcionario: %d",(cliente+(idcliente-1))->pedidos[i]->id_funcionario);
     }
 
 }

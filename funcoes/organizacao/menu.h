@@ -1,5 +1,5 @@
 void menuOrganizacao(ORGANIZACAO *organizacao,int *o,int *qtdO){
-    int opc;
+    int opc,n;
 
     do{
         printf("---------------------------\n");
@@ -29,7 +29,7 @@ void menuOrganizacao(ORGANIZACAO *organizacao,int *o,int *qtdO){
             break;
 
             case 4:
-                int n;
+
                 printf("Digite o id da org:");
                 scanf("%d", &n);
                 listarpedidosorg(organizacao,n);
